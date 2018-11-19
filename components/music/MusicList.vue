@@ -43,20 +43,9 @@
 <script>
 export default {
   props: {
-    songs : { type :Object, default: null}
+    songs : { type :Array, default: null}
   },  
   watch: {},  
-  filters: {
-    imageInfo(item) {
-      return `
-Title: ${item.title}
-Artist: ${item.artist}
-Album: ${item.album}
-Album Image Source:
-${item.albumImageUrl}
-      `;
-    }
-  },
   methods: {}
 };
 </script>

@@ -49,9 +49,9 @@ export default {
     MusicList
   },
   async asyncData({ app }) {    
-      let randomMusicList1 = (await app.$axios.$get('/songs/randomeSong')).data
-      let randomMusicList2 = (await app.$axios.$get('/songs/randomeSong')).data
-      let randomMusicList3 = (await app.$axios.$get('/songs/randomeSong')).data
+      let randomMusicList1 = (await app.$axios.$get('/songs/randomeSong', { progress: true })).data
+      let randomMusicList2 = (await app.$axios.$get('/songs/randomeSong', { progress: true })).data
+      let randomMusicList3 = (await app.$axios.$get('/songs/randomeSong', { progress: true })).data
     
     return { 
       randomMusicList1,
