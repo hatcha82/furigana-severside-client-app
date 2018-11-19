@@ -1,3 +1,4 @@
+require('dotenv').config()
 const pkg = require('./package')
 
 module.exports = {
@@ -30,12 +31,13 @@ module.exports = {
   css: [
     '~/assets/style/app.styl'
   ],
-
+ 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify'
+    '@/plugins/vuetify',
+    '@/plugins/axios'
   ],
 
   /*
@@ -45,17 +47,26 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios'
   ],
+  build: {
+    vendor: ['axios']
+  },
   /*
   ** Axios module configuration
   */
   axios: {
+    proxy: true,   
     // See https://github.com/nuxt-community/axios-module#options
+  }, 
+  /*
+  ** Axios module proxy configuration
+  */
+  proxy: {
+    // '/api/': { target: process.env.API_URL || 'http://www.furiganahub.com:8080', pathRewrite: {'^/api/': ''} }
   },
-
   /*
   ** Build configuration
   */
-  build: {
+  build: {    
     /*
     ** You can extend webpack config here
     */
