@@ -10,7 +10,7 @@
       <v-list>
         <v-list-tile
           v-for="(item, i) in items"
-          :to="item.to"
+          :to="{ name: item.linkTo, params: { id: item.id}}" 
           :key="i"
           router
           exact
@@ -109,7 +109,7 @@ export default {
         {
           icon: 'far fa-newspaper',
           text: 'News',
-          linkTo: 'article-list',
+          linkTo: 'news-list',
           params: {}
         },
         {

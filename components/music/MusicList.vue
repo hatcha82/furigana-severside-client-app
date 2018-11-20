@@ -3,18 +3,18 @@
     <v-layout wrap>    
       <template v-for="(item) in songs" >
         <v-flex  
-          :key="'random' + '_' + item.id"
+          :key="'music' + '_' + item.id"
           xs6
           sm6
           md4 
-          lg2>
+          lg3>
           <v-card>          
             <v-list class="pa-0 mb-1">
               <router-link 
                 :to="{ name: 'music-detail-id', params: { id: item.id}}" 
                 tag="div">
                 <v-img        
-
+                  :lazy-src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"  
                   :src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"
                   class="white--text ma-0 songCardImage"     
                   height="200px"             
