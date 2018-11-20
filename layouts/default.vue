@@ -10,19 +10,16 @@
   </v-app>
 </template>
 <script>
+import Header from '~/components/defualt/header/index.vue'
+import Footer from '~/components/defualt/footer/index.vue'
 
-import Header from "~/components/defualt/header/index.vue"
-import Footer from "~/components/defualt/footer/index.vue"
-
-  export default {
-    components:{
-      Header,
-      Footer
-    },
-    data() {
-      return {
-        
-      }
-    }
+export default {
+  components: {
+    Header,
+    Footer
+  },
+  data() {
+    return {}
   }
+}
 </script>

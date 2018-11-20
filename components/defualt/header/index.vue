@@ -50,11 +50,19 @@
       >
         <v-icon>remove</v-icon>
       </v-btn> -->
-      <img src="~/assets/logoBlue.jpg"  height="50px" style="margin-top:4px;border-radius:25px"/>
-      <v-toolbar-title v-text="title"/>
-      
-    <v-spacer></v-spacer>
-    <v-btn
+      <nuxt-link to="/">
+        <img 
+          src="~/assets/logoBlue.jpg" 
+          height="50px" 
+          style="margin-top:4px;border-radius:25px">
+      </nuxt-link>
+      <nuxt-link 
+        to="/" 
+        tag="div">
+        <v-toolbar-title v-text="title"/>
+      </nuxt-link>
+      <v-spacer/>
+      <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
       >
@@ -82,35 +90,39 @@
 </template>
 <script>
 export default {
-  components:{
-  },
+  components: {},
   data() {
     return {
       clipped: false,
       drawer: true,
       fixed: false,
       items: [
-      // { icon: 'trending_up', text: 'Most Popular' },
-      // { icon: 'subscriptions', text: 'Subscriptions' },
-        { icon: "fas fa-music", text: "Music", linkTo: "music-list", params: {} },
+        // { icon: 'trending_up', text: 'Most Popular' },
+        // { icon: 'subscriptions', text: 'Subscriptions' },
         {
-          icon: "far fa-newspaper",
-          text: "News",
-          linkTo: "article-list",
+          icon: 'fas fa-music',
+          text: 'Music',
+          linkTo: 'music-list',
           params: {}
         },
         {
-          icon: "fab fa-twitter",
-          text: "Twitter",
-          linkTo: "twitter-list",
+          icon: 'far fa-newspaper',
+          text: 'News',
+          linkTo: 'article-list',
+          params: {}
+        },
+        {
+          icon: 'fab fa-twitter',
+          text: 'Twitter',
+          linkTo: 'twitter-list',
           params: {}
         },
         // { icon: 'fab fa-twitter', text: 'Twitter User List', linkTo: 'twitter-userList' , params:{}},
         {
-          icon: "translate",
-          text: "Kanji",
-          linkTo: "twitter-list-search",
-          params: { search: "_FURIGANA" }
+          icon: 'translate',
+          text: 'Kanji',
+          linkTo: 'twitter-list-search',
+          params: { search: '_FURIGANA' }
         }
         // { icon: 'history', text: 'History', linkTo: 'history' },
         // { icon: 'featured_play_list', text: 'Playlists' },

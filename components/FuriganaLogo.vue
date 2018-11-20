@@ -7,10 +7,10 @@
 
 <style>
 .FuriganaHubLogo {
-  width: 180px;
+  width: 100px;
   transform: rotateY(560deg);
   animation: turn 3.5s ease-out forwards 1s;
-  border-radius: 25px
+  border-radius: 25px;
 }
 
 @keyframes turn {

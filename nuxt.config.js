@@ -3,7 +3,6 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
-
   /*
   ** Headers of the page
   */
@@ -16,7 +15,11 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
+      }
     ]
   },
 
@@ -28,17 +31,12 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [
-    '~/assets/style/app.styl'
-  ],
- 
+  css: ['~/assets/style/app.styl'],
+
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    '@/plugins/vuetify',
-    '@/plugins/axios'
-  ],
+  plugins: ['@/plugins/vuetify', '@/plugins/axios'],
 
   /*
   ** Nuxt.js modules
@@ -54,9 +52,9 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    proxy: true,   
+    proxy: true
     // See https://github.com/nuxt-community/axios-module#options
-  }, 
+  },
   /*
   ** Axios module proxy configuration
   */
@@ -66,7 +64,7 @@ module.exports = {
   /*
   ** Build configuration
   */
-  build: {    
+  build: {
     /*
     ** You can extend webpack config here
     */
@@ -78,8 +76,8 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/,
-          options : {
-            fix : true
+          options: {
+            fix: true
           }
         })
       }
