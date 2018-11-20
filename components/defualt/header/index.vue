@@ -54,11 +54,12 @@
         <img 
           src="~/assets/logoBlue.jpg" 
           height="50px" 
-          style="margin-top:4px;border-radius:25px">
+          style="margin-top:4px;border-radius:25px;cursor:pointer">
       </nuxt-link>
       <nuxt-link 
         to="/" 
-        tag="div">
+        tag="div" 
+        style="cursor:pointer">
         <v-toolbar-title v-text="title"/>
       </nuxt-link>
       <v-spacer/>

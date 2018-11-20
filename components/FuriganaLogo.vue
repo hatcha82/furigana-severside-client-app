@@ -1,7 +1,7 @@
 <template>
   <img
     class="FuriganaHubLogo"
-    alt="FuriganaHub Logo"
+    alt="FuriganaHubLogo"
     src="~/assets/logoBlue.jpg">
 </template>
 

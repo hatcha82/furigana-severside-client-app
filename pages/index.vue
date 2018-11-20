@@ -3,13 +3,13 @@
     column
     justify-center
     align-center>
-    <v-flex
+    <!-- <v-flex
       xs12 
       sm8 
       md6 
       lg4>
       <furigana-logo/>
-    </v-flex>
+    </v-flex> -->
     <v-flex
       xs12
       sm8
