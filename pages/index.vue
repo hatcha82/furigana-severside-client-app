@@ -15,7 +15,7 @@
       sm8
       md6
       lg4>
-      <div class="text-xs-center">            
+      <div>            
         J-pop<br>
         <music-list 
           ref="randomMusic" 
