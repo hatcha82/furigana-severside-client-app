@@ -2,8 +2,7 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import colors from 'vuetify/es5/util/colors'
 import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loade
-import InfiniteScroll from 'v-infinite-scroll'
-Vue.use(InfiniteScroll)
+
 /// import infiniteScroll from 'vue-infinite-scroll'
 // import BackToTop from 'vue-backtotop'
 // import moment from 'vue-moment'

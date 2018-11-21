@@ -7,7 +7,6 @@
         sm6
         md6 
         lg4>
-      
         <v-card >          
           <v-list 
             three-line 

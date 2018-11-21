@@ -7,7 +7,7 @@
           xs6
           sm6
           md4 
-          lg3>
+          lg2>
           <v-card>          
             <v-list class="pa-0 mb-1">
               <router-link 
@@ -17,7 +17,7 @@
                   :lazy-src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"  
                   :src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"
                   class="white--text ma-0 songCardImage"     
-                  height="200px"             
+                  height="300px"             
                   conver
                 >
                   <div class="songCard">

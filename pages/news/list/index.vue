@@ -1,9 +1,9 @@
 <template>
   <div>
-    news list 
     <news-list 
       ref="newsList" 
-      :articles="articles"/>     
+      :articles="articles"/>
+    <infinite-loading @infinite="infiniteHandler"/>     
   </div>
 </template>
 <script>
@@ -12,6 +12,15 @@ export default {
   components: {
     NewsList
   },
+  data() {
+    return {
+      searchKeyword: '',
+      songs: null,
+      busy: false,
+      count: 0,
+      offset: 0
+    }
+  },
   async asyncData({ app, params, error }) {
     try {
       params.search = null
@@ -19,15 +28,44 @@ export default {
       var { data, count } = await app.$axios.$get('/articles', {
         params: params
       })
-      console.log(data)
       return {
         articles: data,
         count: count,
-        offset: data.length
+        offset: data.length + 1
       }
     } catch (error) {
-      console.log(error)
       return {}
+    }
+  },
+  methods: {
+    async infiniteHandler($state) {
+      try {
+        var search
+        if (this.searchKeyword === '') {
+          search = null
+        } else {
+          search = this.searchKeyword
+        }
+        var params = {
+          search: search,
+          offset: this.offset
+        }
+        var { data, count } = (await this.$axios.get('/articles', {
+          params: params,
+          progress: true
+        })).data
+        // var dataSet = (await SongsService.index(search, this.offset)).data
+        var data = data
+        if (data.length) {
+          $state.loaded()
+          this.articles.push(...data)
+          this.offset = this.articles.length + 1
+        } else {
+          $state.complete()
+        }
+      } catch (error) {
+        alert(error)
+      }
     }
   }
 }

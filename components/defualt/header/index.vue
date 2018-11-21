@@ -34,10 +34,16 @@
       <v-toolbar-side-icon @click="drawer = !drawer" />
       <v-btn
         icon
+        @click="back()"
+      >
+        <v-icon v-html="'chevron_left'" />
+      </v-btn> 
+      <!-- <v-btn
+        icon
         @click.stop="miniVariant = !miniVariant"
       >
         <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'" />
-      </v-btn>
+      </v-btn> -->
       <!-- <v-btn
         icon
         @click.stop="clipped = !clipped"
@@ -133,6 +139,11 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'FuriganaHub'
+    }
+  },
+  methods: {
+    back() {
+      this.$router.back()
     }
   }
 }

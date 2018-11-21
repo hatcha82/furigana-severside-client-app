@@ -36,7 +36,11 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['@/plugins/vuetify', '@/plugins/axios'],
+  plugins: [
+    '@/plugins/vuetify',
+    '@/plugins/axios',
+    { src: '@/plugins/infiniteload.js', ssr: false }
+  ],
 
   /*
   ** Nuxt.js modules
@@ -46,7 +50,7 @@ module.exports = {
     '@nuxtjs/axios'
   ],
   build: {
-    vendor: ['axios']
+    vendor: ['axios', '@/plugins/infiniteload.js']
   },
   /*
   ** Axios module configuration
