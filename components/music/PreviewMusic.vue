@@ -2,12 +2,12 @@
   <v-card style="text-align: center">
     
     <v-card-text>
-      샘플듣기{{ file }}
+      샘플듣기
       <v-btn 
         :disabled="!loaded" 
         outline 
         icon 
-        class="teal--text" 
+        class="white--text" 
         @click.native="playing ? pause() : play()">
         <v-icon v-if="!playing || paused">play_arrow</v-icon>
         <v-icon v-else>pause</v-icon>
@@ -16,7 +16,7 @@
         :disabled="!loaded" 
         outline 
         icon 
-        class="teal--text" 
+        class="white--text" 
         @click.native="stop()">
         <v-icon>stop</v-icon>
       </v-btn>
@@ -25,7 +25,7 @@
         style="display:none" 
         outline 
         icon 
-        class="teal--text" 
+        class="white--text" 
         @click.native="mute()">
         <v-icon v-if="!isMuted">volume_up</v-icon>
         <v-icon v-else>volume_off</v-icon>
@@ -33,7 +33,7 @@
       <v-btn 
         outline 
         icon 
-        class="teal--text" 
+        class="white--text" 
         @click.native="loaded ? download() : reload()">
         <v-icon v-if="!loaded">refresh</v-icon>
         <v-icon v-else>get_app</v-icon>

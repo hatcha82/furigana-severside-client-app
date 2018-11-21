@@ -124,12 +124,13 @@ export default {
   },
   async mounted() {
     var params = {
-      artist: this.song.artist
+      artist: this.song.artist,
+      keyword: `${this.song.artist} ${this.song.title}`
     }
-    this.ituneInfo = (await this.$axios.get(`/songs/iTunesSearch`, {
+    this.ituneInfo = await this.$axios.get(`/songs/iTunesSearch`, {
       query: params,
       params: params
-    })).data
+    })
     params.keyword = `${this.song.artist} ${this.song.title}`
     params.offset = 1
 

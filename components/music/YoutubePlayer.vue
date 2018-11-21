@@ -20,8 +20,7 @@
         gesture="media" 
         allow="autoplay;encrypted-media" />
     </div>
-    <br>
-    저작권에 의한 플레이 불가능 할 경우 Youtube 이동 
+    저작권에 의한 플레이 불가능 할 경우 Youtube 이동<br>
     <a 
       :href="'https://www.youtube.com/watch?v='+ song.youtubeId" 
       target="_blank" > {{ song.title }} - {{ song.artist }}</a>

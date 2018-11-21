@@ -28,11 +28,7 @@
                 target="_blank">{{ song.title }} {{ song.artist }}<br></a>                
             </div>
           
-            <previewMusic 
-              v-if="ituneInfo && ituneInfo.data && ituneInfo.data.results && ituneInfo.data.results.length > 0" 
-              ref="previewMusic" 
-              :file="ituneInfo.data.results[0].previewUrl" 
-              style="min-width:150px;background:none;color:#eee" />
+            
             <img        
               :src="song.albumImageUrl ? song.albumImageUrl : require('../../assets/noImage.png')"
               class="white--text;"
@@ -43,18 +39,16 @@
           <v-flex 
             align-start 
             flexbox>
-            <!--
-            <previewMusic 
-              v-if="ituneInfo && ituneInfo.data && ituneInfo.data.results  && ituneInfo.data.results.length > 0" 
+            <preview-music 
+              v-if="ituneInfo && ituneInfo.data && ituneInfo.data.results && ituneInfo.data.results.length > 0" 
               ref="previewMusic" 
-              :file="ituneInfo.data.results[0].previewUrl" style="min-width:150px;background:none;color:#eee" />
-            -->
+              :file="ituneInfo.data.results[0].previewUrl" 
+              style="min-width:150px;background:none;color:#eee" />
             <span 
               style="position:absolute;bottom:0px;left:10px;opacity:0.3;font-size:9px" 
               class="white--text">Image 출처: {{ song.albumImageUrl }}</span>
+            
           </v-flex>
-          
-         
         </v-layout>
       </v-img>
     </v-card> 

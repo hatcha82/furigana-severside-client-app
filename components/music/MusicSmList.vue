@@ -8,7 +8,7 @@
           xs6
           sm6
           md4 
-          lg3>
+          lg4>
           <v-card flat>          
             <v-list class="pa-1 mb-1">
               <router-link 
