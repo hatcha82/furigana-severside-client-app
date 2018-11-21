@@ -9,7 +9,7 @@
           md4 
           lg2>
           <v-card>          
-            <v-list class="pa-0 mb-1">
+            <v-list class="pa-1 mb-1">
               <router-link 
                 :to="{ name: 'music-detail-id', params: { id: item.id}}" 
                 tag="div">
@@ -68,7 +68,7 @@ export default {
 <style scope>
 .songCard {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   background: black;
   opacity: 0.7;

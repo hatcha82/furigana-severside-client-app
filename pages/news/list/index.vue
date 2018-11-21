@@ -31,7 +31,7 @@ export default {
       return {
         articles: data,
         count: count,
-        offset: data.length + 1
+        offset: data.length
       }
     } catch (error) {
       return {}
@@ -59,7 +59,7 @@ export default {
         if (data.length) {
           $state.loaded()
           this.articles.push(...data)
-          this.offset = this.articles.length + 1
+          this.offset = this.articles.length
         } else {
           $state.complete()
         }

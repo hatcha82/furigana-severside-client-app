@@ -32,7 +32,7 @@ export default {
       return {
         songs: data,
         count: count,
-        offset: data.length + 1
+        offset: data.length
       }
     } catch (error) {
       return {}
@@ -60,7 +60,7 @@ export default {
         if (data.length) {
           $state.loaded()
           this.songs.push(...data)
-          this.offset = this.songs.length + 1
+          this.offset = this.songs.length
         } else {
           $state.complete()
         }
