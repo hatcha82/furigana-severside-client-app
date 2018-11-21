@@ -7,6 +7,7 @@
   </div>
 </template>
 <script>
+import { mapMutations } from 'vuex'
 import MusicList from '~/components/music/MusicList.vue'
 
 export default {
@@ -16,11 +17,16 @@ export default {
   data() {
     return {
       searchKeyword: '',
-      songs: null,
+      songs: [],
       busy: false,
       count: 0,
       offset: 0
     }
+  },
+  computed: {
+    // songs() {
+    //   return this.$store.state.songs.list
+    // }
   },
   async asyncData({ app, params, error }) {
     try {

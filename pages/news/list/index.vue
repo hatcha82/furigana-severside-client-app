@@ -12,10 +12,10 @@ export default {
   components: {
     NewsList
   },
+
   data() {
     return {
       searchKeyword: '',
-      songs: null,
       busy: false,
       count: 0,
       offset: 0
