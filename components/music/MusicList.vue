@@ -77,12 +77,9 @@ export default {
   position: absolute;
   bottom: 0px;
   width: 100%;
-  background: black;
-  opacity: 0.7;
   cursor: pointer;
 }
 .songCard:hover {
-  opacity: 0.9;
 }
 .songDesc {
   position: absolute;
@@ -91,12 +88,11 @@ export default {
 }
 .songDesc:hover {
   background: black;
-
   opacity: 0.9;
 }
 .songCardImage:hover {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 @keyframes turn {

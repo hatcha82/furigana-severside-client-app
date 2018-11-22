@@ -16,14 +16,17 @@
       md6
       lg4>
       <div>            
-        J-pop<br>
         <music-list 
           ref="randomMusic" 
-          :songs="randomSongs"/>
-        일본 뉴스<br>
+          :songs="randomSongs"
+          class="pa-3" 
+          list-title="추천 J-pop"/>
+        
         <news-list 
-          ref="recentNews" 
-          :articles="recenstNews"/>          
+          ref="recentNews"
+          :articles="recenstNews" 
+          class="pa-3" 
+          list-title="최신 뉴스"/>          
       </div>      
     </v-flex>  
     <v-flex
