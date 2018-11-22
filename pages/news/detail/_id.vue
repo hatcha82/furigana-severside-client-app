@@ -106,6 +106,79 @@ export default {
         alert(error)
       }
     }
+  },
+  head() {
+    return {
+      title: `${this.article.title} - ${this.titleTranslate ||
+        ''} - www.furiganahub.com`,
+      meta: [
+        {
+          vmid: 'keywords',
+          name: 'keywords',
+          content: `web,furigana,japanese,일본뉴스,일본어,일본,${
+            this.article.title
+          },${this.article.titleTranslate || ''}`
+        },
+        {
+          vmid: 'description',
+          name: 'description',
+          content:
+            this.article.article + '\n' + (this.article.translateText || '')
+        },
+        { vmid: 'og:type', property: 'og:type', content: 'article' },
+        {
+          vmid: 'og:title',
+          property: 'og:title',
+          content: `${this.article.title} - ${this.titleTranslate ||
+            ''} - www.furiganahub.com`
+        },
+        {
+          vmid: 'og:url',
+          property: 'og:url',
+          content: `www.furiganahub.com//news/detail/${this.article.id}`
+        },
+        {
+          vmid: 'og:description',
+          property: 'og:description',
+          content: `web,furigana,japanese,일본뉴스,일본어,일본,${
+            this.article.title
+          },${this.article.titleTranslate || ''}`
+        },
+        {
+          vmid: 'og:image',
+          property: 'og:image',
+          content: this.article.newsPubllisherImageUrl
+        },
+        {
+          vmid: 'og:site_name',
+          property: 'og:site_name',
+          content: 'FuriganaHub'
+        },
+        { vmid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+        {
+          vmid: 'twitter:title',
+          name: 'twitter:title',
+          content: `${this.article.title} - ${this.titleTranslate ||
+            ''} - www.furiganahub.com`
+        },
+        {
+          vmid: 'twitter:description',
+          name: 'twitter:description',
+          content:
+            this.article.article + '\n' + (this.article.translateText || '')
+        },
+        {
+          vmid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.article.newsPubllisherImageUrl
+        },
+        {
+          vmid: 'twitter:creator',
+          name: 'twitter:creator',
+          content: `@_FURIGANA`
+        }
+      ]
+    }
   }
 }
 </script>

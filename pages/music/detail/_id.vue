@@ -23,16 +23,14 @@
             song"/>
         </v-flex>
       </no-ssr>
-      <no-ssr placeholder="Loading...">
-        <v-flex 
-          class="pa-2" 
-          xs12
-          sm12
-          md6 
-          lg6> 
-          <music-furigana :song="song"/>
-        </v-flex>
-      </no-ssr> 
+      <v-flex 
+        class="pa-2" 
+        xs12
+        sm12
+        md6 
+        lg6> 
+        <music-furigana :song="song"/>
+      </v-flex>
       <no-ssr placeholder="Loading...">   
         <v-flex 
           xs12
@@ -118,6 +116,7 @@ export default {
       error(err)
     }
   },
+
   methods: {
     async search() {
       var params = {
@@ -170,6 +169,70 @@ export default {
       } catch (error) {
         alert(error)
       }
+    }
+  },
+  head() {
+    return {
+      title: `${this.song.title} by ${this.song.artist} - www.furiganahub.com`,
+      meta: [
+        {
+          vmid: 'keywords',
+          name: 'keywords',
+          content: `web,furigana,japanese,j-pop,일본어,일본가사,${
+            this.song.artist
+          },${this.song.title}`
+        },
+        { vmid: 'description', name: 'description', content: this.song.lyrics },
+        { vmid: 'og:type', property: 'og:type', content: 'article' },
+        {
+          vmid: 'og:title',
+          property: 'og:title',
+          content: `${this.song.title} by ${this.song.artist}`
+        },
+        {
+          vmid: 'og:url',
+          property: 'og:url',
+          content: `www.furiganahub.com//music/detail/${this.song.id}`
+        },
+        {
+          vmid: 'og:description',
+          property: 'og:description',
+          content: this.song.lyrics
+        },
+        {
+          vmid: 'og:image',
+          property: 'og:image',
+          content: this.song.albumImageUrl
+        },
+        {
+          vmid: 'og:site_name',
+          property: 'og:site_name',
+          content: 'FuriganaHub'
+        },
+        { vmid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+        {
+          vmid: 'twitter:title',
+          name: 'twitter:title',
+          content: `${this.song.title} by ${
+            this.song.artist
+          } - www.furiganahub.com`
+        },
+        {
+          vmid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.song.lyrics
+        },
+        {
+          vmid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.song.albumImageUrl
+        },
+        {
+          vmid: 'twitter:creator',
+          name: 'twitter:creator',
+          content: `@_FURIGANA`
+        }
+      ]
     }
   }
 }
