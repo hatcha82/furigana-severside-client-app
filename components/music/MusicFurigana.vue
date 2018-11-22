@@ -32,7 +32,7 @@
     </v-tab>
     <v-tab-item v-if="song.lyricsKor">
       <v-card flat>
-        <v-card-text>
+        <v-card-text>         
           <div 
             class="furigana" 
             v-html="$options.filters.withTranslate(song.tab, song.lyricsKor)"/>

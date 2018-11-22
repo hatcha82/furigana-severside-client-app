@@ -2,15 +2,16 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import colors from 'vuetify/es5/util/colors'
 import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loade
-
+import moment from 'vue-moment'
 /// import infiniteScroll from 'vue-infinite-scroll'
 // import BackToTop from 'vue-backtotop'
 // import moment from 'vue-moment'
 // import underscore from 'vue-underscore'
-// Vue.use(moment)
+
 // Vue.use(underscore)
 // Vue.use(BackToTop)
 // Vue.use(infiniteScroll)
+Vue.use(moment)
 Vue.use(Vuetify, {
   //   theme:{
   //     primary: "#FF9800",

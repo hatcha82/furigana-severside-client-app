@@ -1,5 +1,6 @@
 <template>
   <div>  
+    <h2 class="primary--text">{{ listTitle }}</h2>
     <v-layout wrap>    
       <template v-for="(item) in songs" >
         <v-flex  
@@ -20,7 +21,12 @@
                   height="300px"             
                   conver
                 >
-                  <div class="songCard">
+                  <div 
+                    :title="`${item.artist} - ${item.title}`" 
+                    class="songCard" />
+                  <div 
+                    :title="`${item.artist} - ${item.title}`" 
+                    class="songDesc">
                     <v-subheader
                       v-if="item.header"
                       :key="item.header"
@@ -59,6 +65,7 @@
 <script>
 export default {
   props: {
+    listTitle: { type: String, default: '' },
     songs: { type: Array, default: null }
   },
   watch: {},
@@ -77,7 +84,16 @@ export default {
 .songCard:hover {
   opacity: 0.9;
 }
+.songDesc {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+.songDesc:hover {
+  background: black;
 
+  opacity: 0.9;
+}
 .songCardImage:hover {
   cursor: pointer;
   opacity: 0.8;
