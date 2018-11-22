@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div class="pa-1">
     <news-list 
       ref="newsList" 
-      :articles="articles"/>
+      :articles="articles"
+      list-title="일본 뉴스"/>
     <infinite-loading @infinite="infiniteHandler"/>     
   </div>
 </template>

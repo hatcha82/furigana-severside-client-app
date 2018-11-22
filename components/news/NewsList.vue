@@ -9,7 +9,9 @@
           sm12
           md6 
           lg4>
-          <v-card >          
+          <v-card 
+            flat 
+            class="ml-1 mr-1 mb-1">          
             <v-list 
               three-line 
               class="pa-0">
