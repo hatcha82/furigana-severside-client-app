@@ -16,6 +16,7 @@
       "language": "javascript",
       "autoFix": true
     }
-  ]
+  ],
+  "svn.ignoreMissingSvnWarning": true
 
 }
