@@ -9,6 +9,7 @@ module.exports = {
   head: {
     title: `FuriganaHub`,
     meta: [
+      { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: pkg.description },
@@ -81,6 +82,12 @@ module.exports = {
         href:
           'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
       }
+    ],
+    script: [
+      {
+        src:
+          'https://cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch,Object.entries'
+      }
     ]
   },
 
@@ -111,7 +118,7 @@ module.exports = {
     '@nuxtjs/axios'
   ],
   build: {
-    vendor: ['axios', '@/plugins/infiniteload.js']
+    vendor: ['axios', '@/plugins/infiniteload.js', 'babel-polyfill']
   },
   /*
   ** Axios module configuration
