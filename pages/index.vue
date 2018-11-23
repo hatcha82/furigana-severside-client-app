@@ -15,18 +15,29 @@
       sm8
       md6
       lg4>
-      <div>            
+      <div>           
+             
         <music-list 
           ref="randomMusic" 
           :songs="randomSongs"
           class="pa-3" 
           list-title="추천 J-pop"/>
-        
+        <image-Ad
+          ad-width="728"
+          ad-height="90"
+          ad-id="DAN-t4w6dr2ubfat"
+          class="hidden-sm-and-down"/>    
+        <image-Ad
+          ad-width="320"
+          ad-height="100"
+          ad-id="DAN-1hbghscrx51kh"
+          class="hidden-sm-and-up"/> 
         <news-list 
           ref="recentNews"
           :articles="recenstNews" 
           class="pa-3" 
-          list-title="최신 뉴스"/>          
+          list-title="최신 뉴스"/>  
+      
       </div>      
     </v-flex>  
     <v-flex
@@ -44,11 +55,14 @@
 import FuriganaLogo from '~/components/FuriganaLogo.vue'
 import MusicList from '~/components/music/MusicList.vue'
 import NewsList from '~/components/news/NewsList.vue'
+import imageAd from '~/components/adv/adfit/imageAd.vue'
+
 export default {
   components: {
     FuriganaLogo,
     MusicList,
-    NewsList
+    NewsList,
+    imageAd
   },
   async mounted() {
     //this.$nextTick(async function() {

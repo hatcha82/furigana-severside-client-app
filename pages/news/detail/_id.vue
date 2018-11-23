@@ -28,14 +28,24 @@
       <v-flex>
         <NewsFurigana 
           :article="article" 
-        />     
+        />  
+        <image-Ad
+          ad-width="728"
+          ad-height="90"
+          ad-id="DAN-to1thmareasz"
+          class="hidden-sm-and-down"/>    
+        <image-Ad
+          ad-width="320"
+          ad-height="100"
+          ad-id="DAN-qdy9246opzqo"
+          class="hidden-sm-and-up"/>       
       </v-flex>
       <v-flex>
-        <no-ssr placeholder="Loading...">   
-          <news-list 
-            ref="recentNews" 
-            :articles="recentNewsList"/>       
-        </no-ssr>       
+      
+        <news-list 
+          ref="recentNews" 
+          :articles="recentNewsList"/>       
+      
       </v-flex>
     </v-layout>
     <infinite-loading @infinite="infiniteHandler"/>     

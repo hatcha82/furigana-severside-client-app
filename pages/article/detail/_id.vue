@@ -31,11 +31,9 @@
         />     
       </v-flex>
       <v-flex>
-        <no-ssr placeholder="Loading...">   
-          <news-list 
-            ref="recentNews" 
-            :articles="recentNewsList"/>       
-        </no-ssr>       
+        <news-list 
+          ref="recentNews" 
+          :articles="recentNewsList"/>       
       </v-flex>
     </v-layout>
     <infinite-loading @infinite="infiniteHandler"/>     

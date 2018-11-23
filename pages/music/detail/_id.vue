@@ -28,6 +28,16 @@
         md6 
         lg6> 
         <music-furigana :song="song"/>
+        <image-Ad
+          ad-width="728"
+          ad-height="90"
+          ad-id="DAN-to1thmareasz"
+          class="hidden-sm-and-down"/>    
+        <image-Ad
+          ad-width="320"
+          ad-height="100"
+          ad-id="DAN-qdy9246opzqo"
+          class="hidden-sm-and-up"/>     
       </v-flex>
       <v-flex 
         xs12

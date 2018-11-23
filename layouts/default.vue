@@ -4,9 +4,15 @@
     <v-content>
     
       <nuxt />  
-      <adFitimage728X90 
+      <!-- <image-Ad
+        ad-width="728"
+        ad-height="90"
+        ad-id="DAN-1hbghscrx51kh"
         class="hidden-sm-and-down"/>    
-      <!-- <adFitimage320X100 
+      <image-Ad
+        ad-width="320"
+        ad-height="100"
+        ad-id="DAN-t4w6dr2ubfat"
         class="hidden-sm-and-up"/>     -->
       <back-to-top>
         <v-btn 
@@ -22,20 +28,19 @@
       </back-to-top>
       
     </v-content>
-    <Footer 
-      class="mt-5"/>
+   
   </v-app>
 </template>
 <script>
 import Header from '~/components/defualt/header/index.vue'
 import Footer from '~/components/defualt/footer/index.vue'
-import adFitimage728X90 from '~/components/adv/adfit/image728X90.vue'
-import adFitimage320X100 from '~/components/adv/adfit/image320X100.vue'
+import imageAd from '~/components/adv/adfit/imageAd.vue'
+
 export default {
   components: {
     Header,
     Footer,
-    adFitimage728X90
+    imageAd
   },
   data() {
     return {}
