@@ -9,7 +9,7 @@
           xs6
           sm6
           md4 
-          lg4>
+          lg6>
           <v-card flat>          
             <v-list class="pa-1 mb-1">
               <router-link 
@@ -18,8 +18,8 @@
                 <v-img        
                   :lazy-src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"  
                   :src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"
-                  class="white--text ma-0 songCardImage"     
-                  height="200px"             
+                  :height="cardHeight"     
+                  class="white--text ma-0 songCardImage"             
                   conver
                 >
                   <div 
@@ -67,6 +67,7 @@
 export default {
   props: {
     listTitle: { type: String, default: '' },
+    cardHeight: { type: String, default: '120px' },
     songs: { type: Array, default: null }
   },
   watch: {},

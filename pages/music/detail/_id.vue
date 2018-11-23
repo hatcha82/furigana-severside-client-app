@@ -43,7 +43,8 @@
               v-if="artistSongs.length > 0"
               ref="artistSong" 
               :songs="artistSongs"
-              :list-title="song.artist + ' 다른 음악' "/>
+              :list-title="song.artist + ' 다른 음악' "
+              card-height="300px"/>
             <music-sm-list 
               v-if="randomSongs.length > 0"
               ref="randomSong" 
@@ -56,7 +57,7 @@
     </v-layout>
     <no-ssr placeholder="Loading...">   
       <v-container class="white">  
-        <music-sm-list 
+        <music-list 
           :songs="songs"
           list-title="전체 음악"/>
       </v-container>

@@ -2,12 +2,12 @@
   <div>
     <v-navigation-drawer
       :mini-variant="miniVariant"
-      :clipped="clipped"
+      :clipped="$vuetify.breakpoint.mdAndUp"
       v-model="drawer"
       fixed
       app      
     >
-      <v-list>
+      <v-list dense>
         <v-list-tile
           v-for="(item, i) in items"
           :to="{ name: item.linkTo, params: { id: item.id}}" 
@@ -24,8 +24,8 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar
-      :clipped-left="clipped"
+    <v-toolbar      
+      :clipped-left="$vuetify.breakpoint.mdAndUp"
       fixed
       app
       dark
@@ -117,20 +117,20 @@ export default {
           text: 'News',
           linkTo: 'news-list',
           params: {}
-        },
-        {
-          icon: 'fab fa-twitter',
-          text: 'Twitter',
-          linkTo: 'twitter-list',
-          params: {}
-        },
-        // { icon: 'fab fa-twitter', text: 'Twitter User List', linkTo: 'twitter-userList' , params:{}},
-        {
-          icon: 'translate',
-          text: 'Kanji',
-          linkTo: 'twitter-list-search',
-          params: { search: '_FURIGANA' }
         }
+        // {
+        //   icon: 'fab fa-twitter',
+        //   text: 'Twitter',
+        //   linkTo: 'twitter-list',
+        //   params: {}
+        // },
+        // // { icon: 'fab fa-twitter', text: 'Twitter User List', linkTo: 'twitter-userList' , params:{}},
+        // {
+        //   icon: 'translate',
+        //   text: 'Kanji',
+        //   linkTo: 'twitter-list-search',
+        //   params: { search: '_FURIGANA' }
+        // }
         // { icon: 'history', text: 'History', linkTo: 'history' },
         // { icon: 'featured_play_list', text: 'Playlists' },
         // { icon: 'watch_later', text: 'Watch Later' }

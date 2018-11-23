@@ -1,8 +1,9 @@
 <template>
   <v-footer
     dark
+    fixed
   >
-   <v-layout
+    <v-layout
       justify-center
       row
       wrap
@@ -15,7 +16,9 @@
         white--text
         xs12
       >
-      <div style="float:right;margin-right:10px"> &copy;{{copyrightDate}}&nbsp;   <img style="height:15px;margin-top:0px" src="~/assets/logoWhiteWide.svg"/> &nbsp; hatcha82@gmail.com </div>
+        <div style="float:right;margin-right:10px"> &copy;{{ copyrightDate }}&nbsp;   <img 
+style="height:15px;margin-top:0px" 
+                                                                                           src="~/assets/logoWhiteWide.svg"> &nbsp; hatcha82@gmail.com </div>
       </v-flex>
     </v-layout>
     
@@ -23,8 +26,7 @@
 </template>
 <script>
 export default {
-  components:{
-  },
+  components: {},
   data() {
     return {
       copyrightDate: new Date().getFullYear()
@@ -32,4 +34,3 @@ export default {
   }
 }
 </script>
-
