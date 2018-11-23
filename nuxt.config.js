@@ -87,6 +87,9 @@ module.exports = {
       {
         src:
           'https://cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch,Object.entries'
+      },
+      {
+        src: 'https://t1.daumcdn.net/adfit/static/ad.min.js'
       }
     ]
   },

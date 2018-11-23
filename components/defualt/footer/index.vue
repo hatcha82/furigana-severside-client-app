@@ -1,7 +1,6 @@
 <template>
   <v-footer
     dark
-    fixed
   >
     <v-layout
       justify-center
@@ -17,8 +16,8 @@
         xs12
       >
         <div style="float:right;margin-right:10px"> &copy;{{ copyrightDate }}&nbsp;   <img 
-style="height:15px;margin-top:0px" 
-                                                                                           src="~/assets/logoWhiteWide.svg"> &nbsp; hatcha82@gmail.com </div>
+          style="height:15px;margin-top:0px" 
+          src="~/assets/logoWhiteWide.svg"> &nbsp; hatcha82@gmail.com </div>
       </v-flex>
     </v-layout>
     
