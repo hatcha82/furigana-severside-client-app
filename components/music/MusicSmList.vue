@@ -1,9 +1,16 @@
 <template>
   <div>  
     <h2 class="primary--text">{{ listTitle }}</h2>
+    <div style="display:none">
+      <template v-for="(item) in songs" >
+        <a 
+          :key="'music_a_' + '_' + item.id"
+          :href="`/music/detail/${item.id}`">{{ item.title }} by {{ item.artist }} <br></a>
+      </template>
+    </div>
     <v-layout  
       wrap>     
-      <template v-for="(item) in songs" >
+      <template v-for="(item) in songs" >        
         <v-flex  
           :key="'music' + '_' + item.id"
           xs6

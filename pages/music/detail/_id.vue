@@ -12,17 +12,15 @@
           :song="song" 
           :itune-info="ituneInfo"/>
       </v-flex>
-      <no-ssr placeholder="Loading...">
-        <v-flex 
-          xs12
-          sm6
-          md6 
-          lg6 >
-          <youtube-player 
-            :song="
-            song"/>
-        </v-flex>
-      </no-ssr>
+      <v-flex 
+        xs12
+        sm6
+        md6 
+        lg6 >
+        <youtube-player 
+          :song="
+          song"/>
+      </v-flex>
       <v-flex 
         class="pa-2" 
         xs12
@@ -31,37 +29,33 @@
         lg6> 
         <music-furigana :song="song"/>
       </v-flex>
-      <no-ssr placeholder="Loading...">   
-        <v-flex 
-          xs12
-          sm12
-          md6
-          lg6
-        >
-          <v-container class="white">
-            <music-sm-list 
-              v-if="artistSongs.length > 0"
-              ref="artistSong" 
-              :songs="artistSongs"
-              :list-title="song.artist + ' 다른 음악' "
-              card-height="300px"/>
-            <music-sm-list 
-              v-if="randomSongs.length > 0"
-              ref="randomSong" 
-              :songs="randomSongs"
-              list-title="오늘의 추천 음악"/>
-          </v-container>
-        </v-flex>
-      </no-ssr>
-      
+      <v-flex 
+        xs12
+        sm12
+        md6
+        lg6
+      >
+        <v-container class="white">
+          <music-sm-list 
+            v-if="artistSongs.length > 0"
+            ref="artistSong" 
+            :songs="artistSongs"
+            :list-title="song.artist + ' 다른 음악' "
+            card-height="150px"/>
+          <music-sm-list 
+            v-if="randomSongs.length > 0"
+            ref="randomSong" 
+            :songs="randomSongs"
+            card-height="100px"
+            list-title="오늘의 추천 음악"/>
+        </v-container>
+      </v-flex>
     </v-layout>
-    <no-ssr placeholder="Loading...">   
-      <v-container class="white">  
-        <music-list 
-          :songs="songs"
-          list-title="전체 음악"/>
-      </v-container>
-    </no-ssr>
+    <v-container class="white">  
+      <music-list 
+        :songs="songs"
+        list-title="전체 음악"/>
+    </v-container>
     <infinite-loading @infinite="infiniteHandler"/>
   </div>
 </template>

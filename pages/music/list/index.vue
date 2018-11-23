@@ -1,13 +1,17 @@
 <template>
   <div>
-    <v-text-field
-      v-model="searchKeyword"
-      fixed
-      label="음악 검색"
-      append-icon="search"
-      placeholder="Search"
-      hint="검색어: 제목, 아티스트"
-    />
+    <div 
+      class="pt-3 pl-3 pr-3 pb-1" 
+      fixed>
+      <v-text-field
+        v-model="searchKeyword"
+        fixed
+        label="음악 검색"
+        append-icon="search"
+        placeholder="Search"
+        hint="검색어: 제목, 아티스트"
+      />
+    </div>
     <music-list 
       ref="musicList" 
       :songs="songs"
