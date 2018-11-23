@@ -5,7 +5,7 @@
       <template v-for="(item) in articles" >
         <a 
           :key="'new_a_' + '_' + item.id"
-          :href="`/news/detail/${item.id}`">{{ item.title }} - {{ item.titleTranslate }} <br></a>
+          :href="`/article/detail/${item.id}`">{{ item.title }} - {{ item.titleTranslate }} <br></a>
       </template>
     </div>
     <v-layout wrap >
@@ -24,7 +24,7 @@
               class="pa-0">
               <router-link 
                 :key="item.id" 
-                :to="{ name: 'news-detail-id', params: { id: item.id}}"               
+                :to="{ name: 'article-detail-id', params: { id: item.id}}"               
                 tag="div">
                 <v-list-tile
                   :key="item.id"
@@ -44,17 +44,17 @@
                     <v-list-tile-title >
                       {{ item.title }}
                     </v-list-tile-title>
-                    <v-list-tile-sub-title >
+                    <v-list-tile-title class="text-no-wrap caption">
                       {{ item.titleTranslate }}
-                    </v-list-tile-sub-title >
+                    </v-list-tile-title >
                     <v-list-tile-sub-title >
                       <img 
                         :lazy-src="item.newsPubllisherImageUrl ? item.newsPubllisherImageUrl : require('../../assets/noImage.png')"
                         :src="item.newsPubllisherImageUrl ? item.newsPubllisherImageUrl : require('../../assets/noImage.png')"
                         style="postion:absolute;width:30px;margin-left:2px" 
                       >
-                      <span class="caption">
-                        {{ item.newsPublishedDate | moment("YYYY MMMM Do dddd,a h:mm:ss") }}
+                      <span class="caption text-no-wrap">
+                        {{ item.newsPublishedDate | moment("YYYY. MM. DD dddd, h:mm:ss a") }} 
                       </span>
                     </v-list-tile-sub-title>
                   </v-list-tile-content>
