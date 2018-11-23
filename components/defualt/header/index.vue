@@ -69,12 +69,13 @@
         <v-toolbar-title v-text="title"/>
       </nuxt-link>
       <v-spacer/>
+      <!--       
       <v-btn
         icon
         @click.stop="rightDrawer = !rightDrawer"
       >
         <v-icon>menu</v-icon>
-      </v-btn>
+      </v-btn> -->
        
       
     </v-toolbar>
