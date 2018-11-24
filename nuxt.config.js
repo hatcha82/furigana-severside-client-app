@@ -119,7 +119,19 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    [
+      '@nuxtjs/google-adsense',
+      {
+        id: 'ca-pub-4430047258494940'
+      }
+    ],
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-128960444-1'
+      }
+    ]
   ],
   build: {
     vendor: [
