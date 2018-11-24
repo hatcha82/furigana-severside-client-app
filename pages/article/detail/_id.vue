@@ -22,9 +22,27 @@
       <div class="pl-2 pr-2">
         <!-- <Synthesis :text="article.article" class=""/> -->
       </div>
-     
+      <no-ssr>
+        <div class="pb-3">
+          <adfit-banner
+            style="margin:0 auto;display:block"
+            class="hidden-sm-and-down"
+            data-ad-test="N"
+            data-ad-unit="DAN-t4w6dr2ubfat"/>
+          <adfit-banner
+            style="margin:0 auto;display:block"
+            class="display-xm-and-up hidden-md-and-up"
+            data-ad-test="N"
+            data-ad-unit="DAN-1hbghscrx51kh"/>
+        </div>
+      </no-ssr>
     </v-card>
     <v-layout wrap>
+      <v-flex 
+        xs12
+        sm12
+        md12 
+        lg12 />
       <v-flex>
         <NewsFurigana 
           :article="article" 

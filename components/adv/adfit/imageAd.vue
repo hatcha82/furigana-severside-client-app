@@ -5,7 +5,7 @@
     <ins 
       :data-ad-unit = "adId" 
       :data-ad-width = "adWidth" 
-      :data-ad-height = "height" 
+      :data-ad-height = "adHeight" 
       class="kakao_ad_area" 
       style="display:none;"/> 
   </div>

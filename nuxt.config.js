@@ -110,7 +110,8 @@ module.exports = {
   plugins: [
     '@/plugins/vuetify',
     '@/plugins/axios',
-    { src: '@/plugins/infiniteload.js', ssr: false }
+    { src: '@/plugins/infiniteload.js', ssr: false },
+    { src: '@/plugins/adfit.js', ssr: false }
   ],
 
   /*
@@ -121,7 +122,12 @@ module.exports = {
     '@nuxtjs/axios'
   ],
   build: {
-    vendor: ['axios', '@/plugins/infiniteload.js', 'babel-polyfill']
+    vendor: [
+      'axios',
+      '@/plugins/infiniteload.js',
+      '@/plugins/adfit.js',
+      'babel-polyfill'
+    ]
   },
   /*
   ** Axios module configuration

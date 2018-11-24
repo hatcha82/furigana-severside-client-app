@@ -22,16 +22,31 @@
           :songs="randomSongs"
           class="pa-3" 
           list-title="추천 J-pop"/>
-        <image-Ad
+        <no-ssr>
+          <div>
+            <adfit-banner
+              style="margin:0 auto;display:block"
+              class="hidden-sm-and-down"
+              data-ad-test="N"
+              data-ad-unit="DAN-t4w6dr2ubfat"/>
+            <adfit-banner
+              style="margin:0 auto;display:block"
+              class="display-sm-and-up hidden-md-and-up"
+              data-ad-test="N"
+              data-ad-unit="DAN-1hbghscrx51kh"/>
+          </div>
+        </no-ssr>
+        <!-- <image-Ad
           ad-width="728"
           ad-height="90"
           ad-id="DAN-t4w6dr2ubfat"
-          class="hidden-sm-and-down"/>    
+          />    
         <image-Ad
+        
           ad-width="320"
           ad-height="100"
           ad-id="DAN-1hbghscrx51kh"
-          class="hidden-sm-and-up"/> 
+          />  -->
         <news-list 
           ref="recentNews"
           :articles="recenstNews" 

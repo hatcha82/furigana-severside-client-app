@@ -22,22 +22,35 @@
           song"/>
       </v-flex>
       <v-flex 
+        xs12
+        sm12
+        md12 
+        lg12 >
+        <no-ssr>
+          <div class="pb-3">
+            <adfit-banner
+              style="margin:0 auto;display:block"
+              class="hidden-sm-and-down"
+              data-ad-test="N"
+              data-ad-unit="DAN-t4w6dr2ubfat"/>
+            <adfit-banner
+              style="margin:0 auto;display:block"
+              class="display-xm-and-up hidden-md-and-up"
+              data-ad-test="N"
+              data-ad-unit="DAN-1hbghscrx51kh"/>
+          </div>
+        </no-ssr>
+      </v-flex>
+      
+      
+      <v-flex 
         class="pa-2" 
         xs12
         sm12
         md6 
         lg6> 
         <music-furigana :song="song"/>
-        <image-Ad
-          ad-width="728"
-          ad-height="90"
-          ad-id="DAN-to1thmareasz"
-          class="hidden-sm-and-down"/>    
-        <image-Ad
-          ad-width="320"
-          ad-height="100"
-          ad-id="DAN-qdy9246opzqo"
-          class="hidden-sm-and-up"/>     
+        
       </v-flex>
       <v-flex 
         xs12
@@ -61,6 +74,8 @@
         </v-container>
       </v-flex>
     </v-layout>
+    
+ 
     <v-container class="white">  
       <music-list 
         :songs="songs"
