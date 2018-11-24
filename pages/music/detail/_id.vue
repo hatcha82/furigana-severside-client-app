@@ -5,6 +5,26 @@
     >
       <v-flex 
         xs12
+        sm12
+        md12 
+        lg12 >
+        <no-ssr>
+          <div class="pb-3 mt-3">
+            <adfit-banner
+              style="margin:0 auto;display:block"
+              class="hidden-sm-and-down"
+              data-ad-test="N"
+              data-ad-unit="DAN-t4w6dr2ubfat"/>
+            <adfit-banner
+              style="margin:0 auto;display:block"
+              class="display-xm-and-up hidden-md-and-up"
+              data-ad-test="N"
+              data-ad-unit="DAN-1hbghscrx51kh"/>
+          </div>
+        </no-ssr>
+      </v-flex>
+      <v-flex 
+        xs12
         sm6
         md6 
         lg6 >
@@ -21,26 +41,7 @@
           :song="
           song"/>
       </v-flex>
-      <v-flex 
-        xs12
-        sm12
-        md12 
-        lg12 >
-        <no-ssr>
-          <div class="pb-3">
-            <adfit-banner
-              style="margin:0 auto;display:block"
-              class="hidden-sm-and-down"
-              data-ad-test="N"
-              data-ad-unit="DAN-t4w6dr2ubfat"/>
-            <adfit-banner
-              style="margin:0 auto;display:block"
-              class="display-xm-and-up hidden-md-and-up"
-              data-ad-test="N"
-              data-ad-unit="DAN-1hbghscrx51kh"/>
-          </div>
-        </no-ssr>
-      </v-flex>
+      
       
       
       <v-flex 
