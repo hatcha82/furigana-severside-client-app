@@ -1,13 +1,7 @@
 <template>
   <div>
     <h2 class="primary--text">{{ listTitle }}</h2>
-    <div style="display:none">
-      <template v-for="(item) in articles" >
-        <a 
-          :key="'new_a_' + '_' + item.id"
-          :href="`/article/detail/${item.id}`">{{ item.title }} - {{ item.titleTranslate }} <br></a>
-      </template>
-    </div>
+    
     <v-layout wrap >
       <template v-for="(item) in articles">
         <v-flex 
