@@ -106,7 +106,8 @@ module.exports = {
   plugins: [
     '@/plugins/vuetify',
     '@/plugins/axios',
-    { src: '@/plugins/infiniteload.js', ssr: false }
+    { src: '@/plugins/infiniteload.js', ssr: false },
+    { src: '@/plugins/adfit.js', ssr: false }
   ],
 
   /*
@@ -114,10 +115,27 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    [
+      '@nuxtjs/google-adsense',
+      {
+        id: 'ca-pub-4430047258494940'
+      }
+    ],
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-128960444-1'
+      }
+    ]
   ],
   build: {
-    vendor: ['axios', '@/plugins/infiniteload.js', 'babel-polyfill']
+    vendor: [
+      'axios',
+      '@/plugins/infiniteload.js',
+      '@/plugins/adfit.js',
+      'babel-polyfill'
+    ]
   },
   /*
   ** Axios module configuration

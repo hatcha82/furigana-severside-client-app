@@ -116,7 +116,7 @@ export default {
         {
           icon: 'far fa-newspaper',
           text: 'News',
-          linkTo: 'news-list',
+          linkTo: 'article-list',
           params: {}
         }
         // {

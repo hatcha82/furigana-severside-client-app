@@ -1,7 +1,7 @@
 <template>
   <div>
     <div 
-      class="pt-3 pl-3 pr-3 pb-1" 
+      class="pt-3 pl-3 pr-3 " 
       fixed>
       <v-text-field
         v-model="searchKeyword"
@@ -12,6 +12,20 @@
         hint="검색어: 제목, 아티스트"
       />
     </div>
+    <no-ssr>
+      <div class="pb-3">
+        <adfit-banner
+          style="margin:0 auto;display:block"
+          class="hidden-sm-and-down"
+          data-ad-test="N"
+          data-ad-unit="DAN-t4w6dr2ubfat"/>
+        <adfit-banner
+          style="margin:0 auto;display:block"
+          class="display-sm-and-up hidden-md-and-up"
+          data-ad-test="N"
+          data-ad-unit="DAN-1hbghscrx51kh"/>
+      </div>
+    </no-ssr>
     <music-list 
       ref="musicList" 
       :songs="songs"
