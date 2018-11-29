@@ -97,6 +97,65 @@ export default {
       randomSongs,
       recenstNews
     }
+  },
+  head() {
+    return {
+      title: `www.furiganahub.com`,
+      meta: [
+        {
+          vmid: 'keywords',
+          name: 'keywords',
+          content: `web,furigana,japanese,j-pop,일본어,일본가사`
+        },
+        { vmid: 'og:type', property: 'og:type', content: 'article' },
+        {
+          vmid: 'og:title',
+          property: 'og:title',
+          content: `FuriganaHub`
+        },
+        {
+          vmid: 'og:url',
+          property: 'og:url',
+          content: `www.furiganahub.com`
+        },
+        {
+          vmid: 'og:description',
+          property: 'og:description',
+          content: pkg.description
+        },
+        {
+          vmid: 'og:image',
+          property: 'og:image',
+          content: 'http://www.furiganahub.com/logoBlue.jpg'
+        },
+        {
+          vmid: 'og:site_name',
+          property: 'og:site_name',
+          content: 'FuriganaHub'
+        },
+        { vmid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+        {
+          vmid: 'twitter:title',
+          name: 'twitter:title',
+          content: `www.furiganahub.com`
+        },
+        {
+          vmid: 'twitter:description',
+          name: 'twitter:description',
+          content: pkg.description
+        },
+        {
+          vmid: 'twitter:image',
+          name: 'twitter:image',
+          content: 'http://www.furiganahub.com/logoBlue.jpg'
+        },
+        {
+          vmid: 'twitter:creator',
+          name: 'twitter:creator',
+          content: `@_FURIGANA`
+        }
+      ]
+    }
   }
 }
 </script>
