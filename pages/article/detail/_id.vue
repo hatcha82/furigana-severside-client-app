@@ -54,7 +54,9 @@
           :articles="recentNewsList"/>       
       </v-flex>
     </v-layout>
-    <infinite-loading @infinite="infiniteHandler"/>     
+    <no-ssr>
+      <infinite-loading @infinite="infiniteHandler"/>     
+    </no-ssr>
   </div>
 </template>
 <script>

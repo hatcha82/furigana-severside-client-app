@@ -75,14 +75,14 @@
         </v-container>
       </v-flex>
     </v-layout>
-    
- 
     <v-container class="white">  
       <music-list 
         :songs="songs"
         list-title="전체 음악"/>
     </v-container>
-    <infinite-loading @infinite="infiniteHandler"/>
+    <no-ssr>
+      <infinite-loading @infinite="infiniteHandler"/>
+    </no-ssr>
   </div>
 </template>
 <script>

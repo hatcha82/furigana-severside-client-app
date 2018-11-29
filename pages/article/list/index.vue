@@ -18,7 +18,9 @@
       ref="newsList" 
       :articles="articles"
       list-title="일본 뉴스"/>
-    <infinite-loading @infinite="infiniteHandler"/>     
+    <no-ssr>
+      <infinite-loading @infinite="infiniteHandler"/>     
+    </no-ssr>
   </div>
 </template>
 <script>
