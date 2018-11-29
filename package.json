@@ -1,7 +1,7 @@
 {
   "name": "furigana-severside-client-app",
   "version": "1.0.0",
-  "description": "My majestic Nuxt.js project",
+  "description": "FuriganaHub는 일본어를 후리가나와 함께 표현합니다",
   "author": "Changbeom Ha",
   "private": true,
   "scripts": {
