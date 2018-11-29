@@ -11,9 +11,9 @@
       alt="Vuetify.js" 
       height="150" 
     >
-    <h1 class="white--text mb-2 display-1 text-xs-center font-weight-black">FuriganaHub</h1>
+    <h1 class="white--text mt-2 mb-2 display-1 text-xs-center font-weight-black">FuriganaHub</h1>
     <div class="subheading mb-3 text-xs-center " >일본어를 쉽게 읽어 봅시다.</div>
-    <router-link to="/login">
+    <!-- <router-link to="/login">
       <v-btn
         v-if="!isUserLoggedIn"
         class="blue lighten-2 mt-5"
@@ -22,7 +22,7 @@
       >
         시작하기
       </v-btn>
-    </router-link>
+    </router-link> -->
   </v-layout>
   <!-- <img
     class="FuriganaHubLogo"

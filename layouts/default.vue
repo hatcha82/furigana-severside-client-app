@@ -28,7 +28,7 @@
       </back-to-top>
       
     </v-content>
-   
+    <Footer/>
   </v-app>
 </template>
 <script>
