@@ -121,7 +121,7 @@ export default {
         {
           vmid: 'og:description',
           property: 'og:description',
-          content: pkg.description
+          content: 'FuriganaHub는 일본어를 후리가나와 함께 표현합니다'
         },
         {
           vmid: 'og:image',
@@ -142,7 +142,7 @@ export default {
         {
           vmid: 'twitter:description',
           name: 'twitter:description',
-          content: pkg.description
+          content: 'FuriganaHub는 일본어를 후리가나와 함께 표현합니다'
         },
         {
           vmid: 'twitter:image',
