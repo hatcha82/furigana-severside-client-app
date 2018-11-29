@@ -14,7 +14,7 @@
             <v-list class="pa-1 mb-1">
               <router-link 
                 :to="{ name: 'music-detail-id', params: { id: item.id}}" 
-                tag="div">
+                tag="a">
                 <v-img        
                   :lazy-src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"  
                   :src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"

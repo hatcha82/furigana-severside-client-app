@@ -19,7 +19,7 @@
               <router-link 
                 :key="item.id" 
                 :to="{ name: 'article-detail-id', params: { id: item.id}}"               
-                tag="div">
+                tag="a">
                 <v-list-tile
                   :key="item.id"
                   avatar            
