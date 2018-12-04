@@ -10,8 +10,10 @@
         md12 
         lg12 >
         <no-ssr>
-          <adsbygoogle            
-            ad-slot="	5563055391"/>
+          <div class="white pa-1">      
+            <adsbygoogle            
+              ad-slot="	5563055391"/>
+          </div>
         </no-ssr>
       </v-flex>
       <v-flex 
@@ -53,7 +55,7 @@
       >
 
         <v-container class="white">
-          <div>
+          <div class="white pa-1">      
             <no-ssr>
               <adsbygoogle            
                 ad-slot="	7322450504"/>
@@ -75,7 +77,7 @@
       </v-flex>
     </v-layout>
     <v-container class="white">  
-      <div>
+      <div class="white pa-1">      
         <no-ssr>
           <adsbygoogle            
             ad-slot="3270443286"/>

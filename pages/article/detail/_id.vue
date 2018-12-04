@@ -26,8 +26,7 @@
       </div>
      
     </v-card>
-    <div>      
-     
+    <div class="white pa-1">      
       <no-ssr>
         <adsbygoogle   
           ad-slot="2920580186"/>
@@ -43,11 +42,13 @@
       <v-flex>
         <NewsFurigana 
           :article="article" 
-        />     
-        <no-ssr>  
-          <adsbygoogle 
-            ad-slot="6603183638"/>
-        </no-ssr>
+        /> 
+        <div class="white pa-1">      
+          <no-ssr>  
+            <adsbygoogle 
+              ad-slot="6603183638"/>
+          </no-ssr>
+        </div>
       </v-flex>
       <v-flex>
        
