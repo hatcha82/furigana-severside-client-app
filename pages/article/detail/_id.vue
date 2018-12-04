@@ -1,9 +1,6 @@
 <template>
   <div>
-    <no-ssr>
-      <adsbygoogle            
-        ad-slot="6603183638"/>
-    </no-ssr>
+    
     <v-card>
       <v-card-title>
         <div >
@@ -21,15 +18,18 @@
             :href="article.newsUrl" 
             class="caption grey--text lighten-1">원본 : {{ article.newsUrl }} </a><br>
         </div>
-        <div/>
+        
         <div style="float:right"/>
       </v-card-title>
       <div class="pl-2 pr-2">
         <!-- <Synthesis :text="article.article" class=""/> -->
       </div>
-      <no-ssr>
-        <div class="pb-3"/>
-      </no-ssr>
+      <div>      
+        <no-ssr>
+          <adsbygoogle   
+            ad-slot="6603183638"/>
+        </no-ssr>        
+      </div>
     </v-card>
     <v-layout wrap>
       <v-flex 
@@ -42,19 +42,11 @@
           :article="article" 
         />     
       </v-flex>
-      <v-flex 
-        xs12
-        sm12
-        md12 
-        lg12 />
       <v-flex>
-        <no-ssr>
+        <no-ssr>  
           <adsbygoogle 
-            style="background:red"          
             ad-slot="2920580186"/>
         </no-ssr>
-      </v-flex>
-      <v-flex>
         <news-list 
           ref="recentNews" 
           :articles="recentNewsList"/>       
