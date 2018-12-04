@@ -7,7 +7,9 @@
         <FuriganaLogoIndexPage class="pt-5"/>
       </v-parallax>
     </v-card>
-    <v-card class="white">
+    <v-card 
+      class="white" 
+      flat> 
       <v-card-text class="text-xs-center">
         <v-icon 
           x-large 
@@ -40,8 +42,8 @@
       </div></router-link>
     </v-card>
     <no-ssr>
-      <div>
-        <!-- <adfit-banner
+      <div class="white pa-1">      
+        <adfit-banner
           style="margin:0 auto;display:block"
           class="hidden-sm-and-down"
           data-ad-test="N"
@@ -50,7 +52,7 @@
           style="margin:0 auto;display:block"
           class="display-sm-and-up hidden-md-and-up"
           data-ad-test="N"
-          data-ad-unit="DAN-1hbghscrx51kh"/> -->
+          data-ad-unit="DAN-1hbghscrx51kh"/>
       </div>
     </no-ssr>
    
