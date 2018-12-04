@@ -11,7 +11,7 @@
         lg12 >
         <no-ssr>
           <adsbygoogle            
-            ad-slot="	3270443286"/>
+            ad-slot="	5563055391"/>
         </no-ssr>
       </v-flex>
       <v-flex 

@@ -1,6 +1,9 @@
 <template>
   <div>
-     
+    <no-ssr>
+      <adsbygoogle            
+        ad-slot="6603183638"/>
+    </no-ssr>
     <v-card>
       <v-card-title>
         <div >
@@ -25,12 +28,7 @@
         <!-- <Synthesis :text="article.article" class=""/> -->
       </div>
       <no-ssr>
-        <div class="pb-3">
-          <no-ssr>
-            <adsbygoogle            
-              ad-slot="6603183638"/>
-          </no-ssr>
-        </div>
+        <div class="pb-3"/>
       </no-ssr>
     </v-card>
     <v-layout wrap>
@@ -44,11 +42,19 @@
           :article="article" 
         />     
       </v-flex>
+      <v-flex 
+        xs12
+        sm12
+        md12 
+        lg12 />
       <v-flex>
         <no-ssr>
-          <adsbygoogle            
+          <adsbygoogle 
+            style="background:red"          
             ad-slot="2920580186"/>
         </no-ssr>
+      </v-flex>
+      <v-flex>
         <news-list 
           ref="recentNews" 
           :articles="recentNewsList"/>       

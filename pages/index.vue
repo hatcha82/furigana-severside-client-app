@@ -66,12 +66,7 @@
         :articles="recenstNews" 
         class="pa-3 pb-0 mb-0" 
         list-title="최신 뉴스"/>  
-      <div>
-        <no-ssr>
-          <adsbygoogle            
-            ad-slot="2185673891"/>
-        </no-ssr>
-      </div>
+     
       <div class="text-xs-center pb-2">
         <img 
           class="newsIcon" 
@@ -85,6 +80,12 @@
         <img 
           class="newsIcon" 
           src="https://s.yimg.jp/images/news/cobranding/fnn.png">
+      </div>
+      <div>
+        <no-ssr>
+          <adsbygoogle            
+            ad-slot="2185673891"/>
+        </no-ssr>
       </div>
       <router-link 
         to="/article/list" 
