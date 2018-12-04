@@ -1,7 +1,7 @@
 <template>
   <div>
     
-    <v-card>
+    <v-card flat>
       <v-card-title>
         <div >
           <v-img
@@ -24,14 +24,17 @@
       <div class="pl-2 pr-2">
         <!-- <Synthesis :text="article.article" class=""/> -->
       </div>
-      <div>      
-        <no-ssr>
-          <adsbygoogle   
-            ad-slot="6603183638"/>
-        </no-ssr>        
-      </div>
+     
     </v-card>
+    <div>      
+     
+      <no-ssr>
+        <adsbygoogle   
+          ad-slot="6603183638"/>
+      </no-ssr>        
+    </div>
     <v-layout wrap>
+   
       <v-flex 
         xs12
         sm12
@@ -41,12 +44,13 @@
         <NewsFurigana 
           :article="article" 
         />     
-      </v-flex>
-      <v-flex>
         <no-ssr>  
           <adsbygoogle 
             ad-slot="2920580186"/>
         </no-ssr>
+      </v-flex>
+      <v-flex>
+       
         <news-list 
           ref="recentNews" 
           :articles="recentNewsList"/>       
