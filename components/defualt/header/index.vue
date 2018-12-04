@@ -108,6 +108,12 @@ export default {
         // { icon: 'trending_up', text: 'Most Popular' },
         // { icon: 'subscriptions', text: 'Subscriptions' },
         {
+          icon: 'fas fa-home',
+          text: 'Home',
+          linkTo: 'index',
+          params: {}
+        },
+        {
           icon: 'fas fa-music',
           text: 'Music',
           linkTo: 'music-list',

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <Header/>
-    <v-content>
+    <v-content class="pb-5">
     
       <nuxt />  
       <!-- <image-Ad
@@ -15,8 +15,8 @@
         ad-id="DAN-t4w6dr2ubfat"
         class="hidden-sm-and-up"/>     -->
       <back-to-top>
-        <v-btn 
-          class="mb-5 mr-2"    
+        <v-btn           
+          style="margin-bottom:100px;"
           absolute
           bottom
           right
@@ -26,7 +26,6 @@
           <v-icon>keyboard_arrow_up</v-icon>
         </v-btn>
       </back-to-top>
-      
     </v-content>
     <Footer/>
   </v-app>
