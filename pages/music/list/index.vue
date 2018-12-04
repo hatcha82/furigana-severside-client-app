@@ -1,5 +1,6 @@
 <template>
   <div>
+   
     <div 
       class="pt-3 pl-3 pr-3 " 
       fixed>
@@ -11,6 +12,12 @@
         placeholder="Search"
         hint="검색어: 제목, 아티스트"
       />
+      <div>
+        <no-ssr>
+          <adsbygoogle            
+            ad-slot="3270443286"/>
+        </no-ssr>
+      </div>
     </div>
     <no-ssr>
       <div class="pb-3">

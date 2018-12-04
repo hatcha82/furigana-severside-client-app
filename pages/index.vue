@@ -25,6 +25,10 @@
         to="/music/list" 
         class="pa-3"
       >
+        <no-ssr>
+          <adsbygoogle            
+            ad-slot="3008210098"/>
+        </no-ssr>
         <div class="pr-3 pl-3">
           <v-btn 
             block 
@@ -33,10 +37,9 @@
           </v-btn>
       </div></router-link>
     </v-card>
-   
     <no-ssr>
       <div>
-        <adfit-banner
+        <!-- <adfit-banner
           style="margin:0 auto;display:block"
           class="hidden-sm-and-down"
           data-ad-test="N"
@@ -45,7 +48,7 @@
           style="margin:0 auto;display:block"
           class="display-sm-and-up hidden-md-and-up"
           data-ad-test="N"
-          data-ad-unit="DAN-1hbghscrx51kh"/>
+          data-ad-unit="DAN-1hbghscrx51kh"/> -->
       </div>
     </no-ssr>
    
@@ -63,6 +66,12 @@
         :articles="recenstNews" 
         class="pa-3 pb-0 mb-0" 
         list-title="최신 뉴스"/>  
+      <div>
+        <no-ssr>
+          <adsbygoogle            
+            ad-slot="2185673891"/>
+        </no-ssr>
+      </div>
       <div class="text-xs-center pb-2">
         <img 
           class="newsIcon" 

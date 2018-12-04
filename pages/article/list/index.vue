@@ -1,19 +1,11 @@
 <template>
   <div class="pa-1">
-    <no-ssr>
-      <div class="pt-2 pb-2">
-        <adfit-banner
-          style="margin:0 auto;display:block"
-          class="hidden-sm-and-down"
-          data-ad-test="N"
-          data-ad-unit="DAN-t4w6dr2ubfat"/>
-        <adfit-banner
-          style="margin:0 auto "
-          class="display-sm-and-up hidden-md-and-up"
-          data-ad-test="N"
-          data-ad-unit="DAN-1hbghscrx51kh"/>
-      </div>
-    </no-ssr>
+    <div>
+      <no-ssr>
+        <adsbygoogle            
+          ad-slot="2920580186"/>
+      </no-ssr>
+    </div>
     <news-list 
       ref="newsList" 
       :articles="articles"

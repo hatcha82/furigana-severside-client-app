@@ -1,8 +1,9 @@
 <template>
   <div>
+     
     <v-card>
       <v-card-title>
-        <div v-if="(!edit)" >
+        <div >
           <v-img
             :src="article.newsPubllisherImageUrl ? article.newsPubllisherImageUrl : require('~/assets/noImage.png')"
             :lazy-src="article.newsPubllisherImageUrl ? article.newsPubllisherImageUrl : require('~/assets/noImage.png')"
@@ -17,6 +18,7 @@
             :href="article.newsUrl" 
             class="caption grey--text lighten-1">원본 : {{ article.newsUrl }} </a><br>
         </div>
+        <div/>
         <div style="float:right"/>
       </v-card-title>
       <div class="pl-2 pr-2">
@@ -24,16 +26,10 @@
       </div>
       <no-ssr>
         <div class="pb-3">
-          <adfit-banner
-            style="margin:0 auto;display:block"
-            class="hidden-sm-and-down"
-            data-ad-test="N"
-            data-ad-unit="DAN-t4w6dr2ubfat"/>
-          <adfit-banner
-            style="margin:0 auto;display:block"
-            class="display-xm-and-up hidden-md-and-up"
-            data-ad-test="N"
-            data-ad-unit="DAN-1hbghscrx51kh"/>
+          <no-ssr>
+            <adsbygoogle            
+              ad-slot="6603183638"/>
+          </no-ssr>
         </div>
       </no-ssr>
     </v-card>
@@ -49,6 +45,10 @@
         />     
       </v-flex>
       <v-flex>
+        <no-ssr>
+          <adsbygoogle            
+            ad-slot="2920580186"/>
+        </no-ssr>
         <news-list 
           ref="recentNews" 
           :articles="recentNewsList"/>       

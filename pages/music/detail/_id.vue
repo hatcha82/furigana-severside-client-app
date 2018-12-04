@@ -1,5 +1,6 @@
 <template>
   <div>
+   
     <v-layout 
       wrap 
     >
@@ -9,18 +10,8 @@
         md12 
         lg12 >
         <no-ssr>
-          <div class="pb-3 mt-3">
-            <adfit-banner
-              style="margin:0 auto;display:block"
-              class="hidden-sm-and-down"
-              data-ad-test="N"
-              data-ad-unit="DAN-t4w6dr2ubfat"/>
-            <adfit-banner
-              style="margin:0 auto;display:block"
-              class="display-xm-and-up hidden-md-and-up"
-              data-ad-test="N"
-              data-ad-unit="DAN-1hbghscrx51kh"/>
-          </div>
+          <adsbygoogle            
+            ad-slot="	3270443286"/>
         </no-ssr>
       </v-flex>
       <v-flex 
@@ -53,13 +44,21 @@
         <music-furigana :song="song"/>
         
       </v-flex>
+      
       <v-flex 
         xs12
         sm12
         md6
         lg6
       >
+
         <v-container class="white">
+          <div>
+            <no-ssr>
+              <adsbygoogle            
+                ad-slot="	7322450504"/>
+            </no-ssr>
+          </div>
           <music-sm-list 
             v-if="artistSongs.length > 0"
             ref="artistSong" 
@@ -76,6 +75,12 @@
       </v-flex>
     </v-layout>
     <v-container class="white">  
+      <div>
+        <no-ssr>
+          <adsbygoogle            
+            ad-slot="3270443286"/>
+        </no-ssr>
+      </div>
       <music-list 
         :songs="songs"
         list-title="전체 음악"/>
