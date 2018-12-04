@@ -3,7 +3,7 @@
     <v-navigation-drawer
       :mini-variant="miniVariant"
       :clipped="$vuetify.breakpoint.mdAndUp"
-      v-model="$vuetify.breakpoint.mdAndUp"
+      v-model="drawer"
       fixed
       app      
     >
@@ -142,7 +142,9 @@ export default {
       title: 'FuriganaHub'
     }
   },
-  mounted() {},
+  mounted() {
+    this.drawer = this.$vuetify.breakpoint.mdAndUp
+  },
   methods: {
     back() {
       this.$router.back()
