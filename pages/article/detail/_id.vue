@@ -30,7 +30,7 @@
      
       <no-ssr>
         <adsbygoogle   
-          ad-slot="6603183638"/>
+          ad-slot="2920580186"/>
       </no-ssr>        
     </div>
     <v-layout wrap>
@@ -46,7 +46,7 @@
         />     
         <no-ssr>  
           <adsbygoogle 
-            ad-slot="2920580186"/>
+            ad-slot="6603183638"/>
         </no-ssr>
       </v-flex>
       <v-flex>
