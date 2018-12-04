@@ -21,14 +21,16 @@
         :songs="randomSongs" 
         class="pa-3" 
         list-title="추천 J-pop"/> 
-      <router-link 
-        to="/music/list" 
-        class="pa-3"
-      >
+      <div class="white pa-1">      
         <no-ssr>
           <adsbygoogle            
             ad-slot="3008210098"/>
         </no-ssr>
+      </div>
+      <router-link 
+        to="/music/list" 
+        class="pa-3"
+      >
         <div class="pr-3 pl-3">
           <v-btn 
             block 
@@ -81,7 +83,7 @@
           class="newsIcon" 
           src="https://s.yimg.jp/images/news/cobranding/fnn.png">
       </div>
-      <div>
+      <div class="white pa-1">      
         <no-ssr>
           <adsbygoogle            
             ad-slot="2185673891"/>
