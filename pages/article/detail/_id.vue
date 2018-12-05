@@ -27,7 +27,7 @@
      
     </v-card>
     
-    <div class="white pa-1">      
+    <div class="white text-xs-center pa-1">      
       <no-ssr>
         <adfit-banner
           style="margin:0 auto;display:block"
@@ -54,7 +54,7 @@
         <NewsFurigana 
           :article="article" 
         /> 
-        <div class="white pa-1">      
+        <div class="white text-xs-center pa-1">      
           <no-ssr>  
             <adsbygoogle 
               ad-slot="6603183638"/>

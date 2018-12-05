@@ -23,10 +23,10 @@
         :songs="randomSongs" 
         class="pa-3" 
         list-title="추천 J-pop"/> 
-      <div class="white pa-1">      
+      <div class="white text-xs-center pa-1">      
         <no-ssr>
           <adsbygoogle            
-            ad-slot="3008210098"/>
+            ad-slot="5199468592"/>
         </no-ssr>
       </div>
       <router-link 
@@ -42,7 +42,7 @@
       </div></router-link>
     </v-card>
     <no-ssr>
-      <div class="white pa-1">      
+      <div class="white text-xs-center pa-1">      
         <adfit-banner
           style="margin:0 auto;display:block"
           class="hidden-sm-and-down"
@@ -85,7 +85,7 @@
           class="newsIcon" 
           src="https://s.yimg.jp/images/news/cobranding/fnn.png">
       </div>
-      <div class="white pa-1">      
+      <div class="white text-xs-center pa-1">      
         <no-ssr>
           <adsbygoogle            
             ad-slot="2185673891"/>

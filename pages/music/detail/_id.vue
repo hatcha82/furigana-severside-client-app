@@ -10,7 +10,7 @@
         md12 
         lg12 >
         <no-ssr>
-          <div class="white pa-1">      
+          <div class="white text-xs-center pa-1">      
             <adsbygoogle            
               ad-slot="	5563055391"/>
           </div>
@@ -55,7 +55,7 @@
       >
 
         <v-container class="white">
-          <div class="white pa-1">      
+          <div class="white text-xs-center pa-1">      
             <no-ssr>
               <adsbygoogle            
                 ad-slot="	7322450504"/>
@@ -67,6 +67,12 @@
             :songs="artistSongs"
             :list-title="song.artist + ' 다른 음악' "
             card-height="150px"/>
+          <div class="white text-xs-center pa-1">      
+            <no-ssr>
+              <adsbygoogle            
+                ad-slot="	3270443286"/>
+            </no-ssr>
+          </div>
           <music-sm-list 
             v-if="randomSongs.length > 0"
             ref="randomSong" 
@@ -78,7 +84,7 @@
       </v-flex>
     </v-layout>
     <v-container class="white">  
-      <div class="white pa-1">      
+      <div class="white text-xs-center pa-1">      
         <no-ssr>
           <adfit-banner
             style="margin:0 auto;display:block"
@@ -190,7 +196,8 @@ export default {
         }
         var params = {
           search: search,
-          offset: this.offset
+          offset: this.offset,
+          songid: this.song.id
         }
         var { data, count } = (await this.$axios.get('/songs', {
           params: params,
