@@ -1,29 +1,23 @@
 <template>
   <div class="">
-    <v-layout row>
+    <v-layout wrap>
       <v-flex 
-        xs8 
-        md8 
-        lg8>
-        <v-select 
-          v-model="selectedVoice"
-          :items="voiceList"
-          class="mt-3"             
-          item-text="name"
-          item-value="name"
-          label="음성언어를 선택해주세요."
-          persistent-hint
-          return-object
-          single-line
-          @change="voiceChange"          
-        />
-      </v-flex>
-      <v-flex 
-       
-        class="pt-4" 
-        xs1 
-        md1 
-        lg1>
+      >
+        <div v-if="false">
+          <v-select 
+            v-model="selectedVoice"
+            :items="voiceList"
+            class="mt-3"             
+            item-text="name"
+            item-value="name"
+            label="음성언어를 선택해주세요."
+            persistent-hint
+            return-object
+            single-line
+            @change="voiceChange"          
+          />
+        </div>
+        
         <transition 
           v-if="isLoading" 
           name="fade">  
@@ -42,13 +36,22 @@
             @click="play" >
             <v-icon v-if="!isLoading">fas fa-volume-up </v-icon>
             <v-icon v-if="isLoading">fas fa-headphones-alt</v-icon>
-          </v-btn>    
-          <div id="page-wrapper">       
-            <v-layout 
-              row 
-              justify-center >
-              <v-flex xs12>
-                <v-select 
+          </v-btn>  
+        </transition> 
+      </v-flex>
+      <v-flex 
+       
+        class="pt-4" 
+      >
+         
+        <div 
+          v-if="false" 
+          id="page-wrapper">       
+          <v-layout 
+            row 
+            justify-center >
+            <v-flex xs12>
+              <!-- <v-select 
                   v-model="selectedVoice"
                   :items="voiceList"             
                   item-text="name"
@@ -58,43 +61,43 @@
                   return-object
                   single-line
                   @change="voiceChange"
-                />
-              </v-flex>
-              <v-flex 
-                xs6 
-                style="">
-                <v-slider 
-                  v-model="volume" 
-                  min="0" 
-                  max="10" 
-                  step="1" 
-                  label="Volume"/>
-              </v-flex>
-              <v-flex 
-                xs6 
-                style="">
-                <v-slider 
-                  v-model="rate" 
-                  min="0" 
-                  max="10" 
-                  step="1" 
-                  label="Rate"/>
-              </v-flex>           
-              <v-flex xs4>
-                <v-slider 
-                  v-model="pitch" 
-                  min="0" 
-                  max="10" 
-                  step="1" 
-                  thumb-label="always" 
-                  label="Pitch"/>
-              </v-flex>           
-            </v-layout>        
-            <v-btn @click="play"><v-icon >play_arrow</v-icon></v-btn>
-            <v-btn @click="pause"><v-icon >pause</v-icon></v-btn>      
-            <v-btn @click="reset"><v-icon />Reset</v-btn>    
-          </div>
-        </transition>
+                /> -->
+            </v-flex>
+            <v-flex 
+              xs6 
+              style="">
+              <v-slider 
+                v-model="volume" 
+                min="0" 
+                max="10" 
+                step="1" 
+                label="Volume"/>
+            </v-flex>
+            <v-flex 
+              xs6 
+              style="">
+              <v-slider 
+                v-model="rate" 
+                min="0" 
+                max="10" 
+                step="1" 
+                label="Rate"/>
+            </v-flex>           
+            <v-flex xs4>
+              <v-slider 
+                v-model="pitch" 
+                min="0" 
+                max="10" 
+                step="1" 
+                thumb-label="always" 
+                label="Pitch"/>
+            </v-flex>           
+          </v-layout>        
+          <v-btn @click="play"><v-icon >play_arrow</v-icon></v-btn>
+          <v-btn @click="pause"><v-icon >pause</v-icon></v-btn>      
+          <v-btn @click="reset"><v-icon />Reset</v-btn>    
+        </div>
+        
       </v-flex>
     </v-layout>
 
@@ -130,17 +133,10 @@ export default {
     // Chrome works on the onvoiceschanged function
     setTimeout(() => {
       this.isLoading = true
-      this.voiceList = this.synth.getVoices().filter(function(obj) {
-        if (obj.lang === 'ja-JP') return true
-      })
 
-      if (this.voiceList.length == 0) {
-        this.voiceList = this.synth.getVoices()
-      }
-      this.selectedVoice = this.voiceList[0]
-      if (this.voiceList.length) {
-        this.isLoading = false
-      }
+      this.voiceList = this.synth.getVoices()
+
+      this.isLoading = false
     }, 2000)
 
     this.synth.onvoiceschanged = () => {
@@ -176,7 +172,7 @@ export default {
         this.greetingSpeech.rate = this.rate / 5
         this.greetingSpeech.volume = this.volume / 5
         this.greetingSpeech.pitch = this.pitch / 5
-        this.greetingSpeech.voice = this.selectedVoice
+        this.greetingSpeech.lang = 'ja-JP'
         this.synth.speak(this.greetingSpeech)
       }
     },
