@@ -11,6 +11,7 @@ import moment from 'vue-moment'
 // Vue.use(underscore)
 // Vue.use(BackToTop)
 // Vue.use(infiniteScroll)
+//Vue.component('pulse-loader', require('vue-spinner/src/PulseLoader.vue'))
 Vue.use(moment)
 Vue.use(Vuetify, {
   //   theme:{

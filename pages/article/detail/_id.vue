@@ -1,6 +1,21 @@
 <template>
   <div>
-    
+    <div class="white text-xs-center pa-1">      
+      <no-ssr>
+        <adfit-banner
+          style="margin:0 auto;display:block"
+          class="hidden-sm-and-down"
+          data-ad-test="N"
+          data-ad-unit="DAN-t4w6dr2ubfat"/>
+        <adfit-banner
+          style="margin:0 auto;display:block"
+          class="display-sm-and-up hidden-md-and-up"
+          data-ad-test="N"
+          data-ad-unit="DAN-1hbghscrx51kh"/>
+        <adsbygoogle   
+          ad-slot="2920580186"/>
+      </no-ssr>        
+    </div>
     <v-card flat>
       <v-card-title>
         <div >
@@ -22,27 +37,16 @@
         <div style="float:right"/>
       </v-card-title>
       <div class="pl-2 pr-2">
-        <!-- <Synthesis :text="article.article" class=""/> -->
+        <no-ssr>
+          <Synthesis 
+            :text="article.article" 
+            class=""/>
+        </no-ssr>
       </div>
      
     </v-card>
     
-    <div class="white text-xs-center pa-1">      
-      <no-ssr>
-        <adfit-banner
-          style="margin:0 auto;display:block"
-          class="hidden-sm-and-down"
-          data-ad-test="N"
-          data-ad-unit="DAN-t4w6dr2ubfat"/>
-        <adfit-banner
-          style="margin:0 auto;display:block"
-          class="display-sm-and-up hidden-md-and-up"
-          data-ad-test="N"
-          data-ad-unit="DAN-1hbghscrx51kh"/>
-        <adsbygoogle   
-          ad-slot="2920580186"/>
-      </no-ssr>        
-    </div>
+    
     <v-layout wrap>
    
       <v-flex 
@@ -76,8 +80,9 @@
 <script>
 import NewsFurigana from '~/components/news/NewsFurigana.vue'
 import NewsList from '~/components/news/NewsList.vue'
+import Synthesis from '~/components/common/Synthesis.vue'
 export default {
-  components: { NewsFurigana, NewsList },
+  components: { NewsFurigana, NewsList, Synthesis },
   data() {
     return {
       searchKeyword: '',
