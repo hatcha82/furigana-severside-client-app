@@ -114,6 +114,7 @@ export default {
       }
       var params = {
         search: search,
+        newsPublishedDate: this.article.newsPublishedDate,
         offset: this.offset,
         limit: 10
       }
