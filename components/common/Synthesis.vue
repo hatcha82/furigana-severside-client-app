@@ -34,8 +34,8 @@
           <v-btn 
             color="primary" 
             @click="play" >
-            <v-icon v-if="!isLoading">fas fa-volume-up </v-icon>
-            <v-icon v-if="isLoading">fas fa-headphones-alt</v-icon>
+           
+            <v-icon v-if="!isLoading">fas fa-headphones-alt</v-icon>
           </v-btn>  
         </transition> 
       </v-flex>
@@ -127,10 +127,14 @@ export default {
       greetingSpeech: new window.SpeechSynthesisUtterance()
     }
   },
+  beforeDestroy() {
+    this.synth.cancel()
+  },
   mounted() {
     // wait for voices to load
     // I can't get FF to work without calling this first
     // Chrome works on the onvoiceschanged function
+
     setTimeout(() => {
       this.isLoading = true
 
