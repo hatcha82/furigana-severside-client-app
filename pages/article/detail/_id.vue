@@ -1,15 +1,7 @@
 <template>
   <div>
     
-    <div class="white text-xs-center pa-1">      
-      <no-ssr>
-        <ad-component
-          google-ad-slot-id="2920580186"
-          adfit-desktop-unit="DAN-t4w6dr2ubfat" 
-          adfit-mobile-unit="DAN-1hbghscrx51kh"            
-        />        
-      </no-ssr>        
-    </div>
+   
     <v-card flat>
       <v-card-title>
         <v-layout wrap>
@@ -64,9 +56,9 @@
     </v-card>
     
     
-    <v-layout wrap>
-   
-     
+    <v-layout 
+      wrap 
+      class="white">
       <v-flex
         xs12
         sm12
@@ -81,7 +73,15 @@
         sm12
         md6 
         lg6>
-        <no-ssr>  
+        <no-ssr>      
+          <no-ssr>
+            <ad-component
+              google-ad-slot-id="2920580186"
+              adfit-desktop-unit="DAN-t4w6dr2ubfat" 
+              adfit-mobile-unit="DAN-1hbghscrx51kh"    
+              layout-type="column"                  
+            />        
+          </no-ssr>        
           <ad-component
             google-ad-slot-id="6603183638"
             adfit-desktop-unit="DAN-u7u2dizil640" 
