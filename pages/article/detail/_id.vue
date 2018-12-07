@@ -1,40 +1,57 @@
 <template>
   <div>
+    
     <div class="white text-xs-center pa-1">      
       <no-ssr>
-        <adfit-banner
-          style="margin:0 auto;display:block"
-          class="hidden-sm-and-down"
-          data-ad-test="N"
-          data-ad-unit="DAN-t4w6dr2ubfat"/>
-        <adfit-banner
-          style="margin:0 auto;display:block"
-          class="display-sm-and-up hidden-md-and-up"
-          data-ad-test="N"
-          data-ad-unit="DAN-1hbghscrx51kh"/>
-        <adsbygoogle   
-          ad-slot="2920580186"/>
+        <ad-component
+          google-ad-slot-id="2920580186"
+          adfit-desktop-unit="DAN-t4w6dr2ubfat" 
+          adfit-mobile-unit="DAN-1hbghscrx51kh"            
+        />        
       </no-ssr>        
     </div>
     <v-card flat>
       <v-card-title>
-        <div >
-          <v-img
-            :src="article.newsPubllisherImageUrl ? article.newsPubllisherImageUrl : require('~/assets/noImage.png')"
-            :lazy-src="article.newsPubllisherImageUrl ? article.newsPubllisherImageUrl : require('~/assets/noImage.png')"
-            class="white--text "
-            height="80"
-            contain
-            position="left"
-          />
-          <br>
-          <span class="caption">{{ article.newsPublisher }}</span><br>            
-          <a 
-            :href="article.newsUrl" 
-            class="caption grey--text lighten-1">원본 : {{ article.newsUrl }} </a><br>
-        </div>
+        <v-layout wrap>
+          <v-flex
+            xs12
+            sm12
+            md6 
+            lg6
+          >
+            <v-img
+              :src="article.newsPubllisherImageUrl ? article.newsPubllisherImageUrl : require('~/assets/noImage.png')"
+              :lazy-src="article.newsPubllisherImageUrl ? article.newsPubllisherImageUrl : require('~/assets/noImage.png')"
+              class="white--text "
+              height="80"
+              contain
+              position="left"
+            />
+            <br>
+            <span class="caption">{{ article.newsPublisher }}</span><br>            
+            <a 
+              :href="article.newsUrl" 
+              class="caption grey--text lighten-1">원본 : {{ article.newsUrl }} </a><br>
+          </v-flex>
+          <v-flex
+            xs12
+            sm12
+            md6 
+            lg6
+          >
+            <no-ssr>  
+              <ad-component
+                google-ad-slot-id="5199468592"
+                adfit-desktop-unit="DAN-1h7zrmefbegc0" 
+                adfit-mobile-unit="DAN-1h84t5wt7s2ue" 
+                layout-type="column"           
+              />     
+            </no-ssr>
+          </v-flex>
+        </v-layout>
+      
         
-        <div style="float:right"/>
+       
       </v-card-title>
       <div class="pl-2 pr-2">
         <no-ssr>
@@ -49,21 +66,37 @@
     
     <v-layout wrap>
    
-      <v-flex 
+     
+      <v-flex
         xs12
         sm12
-        md12 
-        lg12 />
-      <v-flex>
+        md6 
+        lg6 >
         <NewsFurigana 
           :article="article" 
         /> 
-        <div class="white text-xs-center pa-1">      
-          <no-ssr>  
-            <adsbygoogle 
-              ad-slot="6603183638"/>
-          </no-ssr>
-        </div>
+      </v-flex>
+      <v-flex 
+        xs12
+        sm12
+        md6 
+        lg6>
+        <no-ssr>  
+          <ad-component
+            google-ad-slot-id="6603183638"
+            adfit-desktop-unit="DAN-u7u2dizil640" 
+            adfit-mobile-unit="DAN-vbk8dw9dcxfd"  
+            layout-type="column"          
+          /> 
+          <!-- adfit 광고2 -->
+          <ad-component
+            google-ad-slot-id="5563055391"
+            adfit-desktop-unit="DAN-1h7zrmefbegc0" 
+            adfit-mobile-unit="DAN-1h84t5wt7s2ue"  
+            layout-type="column"          
+          /> 
+          <!-- adfit 광고3 -->
+        </no-ssr>
       </v-flex>
       <v-flex>
        
@@ -78,11 +111,12 @@
   </div>
 </template>
 <script>
+import AdComponent from '~/components/adv/AdComponent.vue'
 import NewsFurigana from '~/components/news/NewsFurigana.vue'
 import NewsList from '~/components/news/NewsList.vue'
 import Synthesis from '~/components/common/Synthesis.vue'
 export default {
-  components: { NewsFurigana, NewsList, Synthesis },
+  components: { NewsFurigana, NewsList, Synthesis, AdComponent },
   data() {
     return {
       searchKeyword: '',

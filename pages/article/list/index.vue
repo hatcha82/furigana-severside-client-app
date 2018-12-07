@@ -11,38 +11,13 @@
         placeholder="Search"
         hint="검색어: 일본어 제목, 번역 제목"
       />
-      <v-layout wrap>
-        <v-flex
-          xs12
-          sm12
-          md6 
-          lg6
-        >
-          <no-ssr>
-            <adsbygoogle            
-              ad-slot="2920580186"/>
-          </no-ssr>
-        </v-flex>
-        <v-flex
-          xs12
-          sm12
-          md6 
-          lg6
-        >
-          <no-ssr>
-            <adfit-banner
-              style="margin:0 auto;display:block"
-              class="hidden-sm-and-down"
-              data-ad-test="N"
-              data-ad-unit="DAN-t4w6dr2ubfat"/>
-            <adfit-banner
-              style="margin:0 auto;display:block"
-              class="display-sm-and-up hidden-md-and-up"
-              data-ad-test="N"
-              data-ad-unit="DAN-1hbghscrx51kh"/>
-          </no-ssr>
-        </v-flex>
-      </v-layout>
+      <no-ssr>
+        <ad-component
+          google-ad-slot-id="2920580186"
+          adfit-desktop-unit="DAN-t4w6dr2ubfat"
+          adfit-mobile-unit="DAN-1hbghscrx51kh"
+        />
+      </no-ssr>     
       <news-list 
         ref="newsList" 
         :articles="articles"
@@ -53,10 +28,12 @@
     </div>
 </div></template>
 <script>
+import AdComponent from '~/components/adv/AdComponent.vue'
 import NewsList from '~/components/news/NewsList.vue'
 import _ from 'lodash'
 export default {
   components: {
+    AdComponent,
     NewsList
   },
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-   
+    
     <v-layout 
       wrap 
     >
@@ -10,9 +10,13 @@
         md12 
         lg12 >
         <no-ssr>
-          <div class="white text-xs-center pa-1">      
-            <adsbygoogle            
-              ad-slot="	5563055391"/>
+          <div class="white text-xs-center pa-1">     
+            <ad-component
+              google-ad-slot-id="5563055391"
+              adfit-desktop-unit="DAN-u7u2dizil640" 
+              adfit-mobile-unit="DAN-vbk8dw9dcxfd"            
+            /> 
+            <!-- adfit 광고2 -->
           </div>
         </no-ssr>
       </v-flex>
@@ -55,24 +59,33 @@
       >
 
         <v-container class="white">
-          <div class="white text-xs-center pa-1">      
-            <no-ssr>
-              <adsbygoogle            
-                ad-slot="	7322450504"/>
-            </no-ssr>
-          </div>
+          <no-ssr>
+            <ad-component
+              google-ad-slot-id="7322450504"
+              adfit-desktop-unit="DAN-1h7zrmefbegc0"
+              adfit-mobile-unit="DAN-1h84t5wt7s2ue"
+              layout-type="column"
+            />
+          <!-- adfit 광고3 -->
+          </no-ssr>     
+         
           <music-sm-list 
             v-if="artistSongs.length > 0"
             ref="artistSong" 
             :songs="artistSongs"
             :list-title="song.artist + ' 다른 음악' "
             card-height="150px"/>
-          <div class="white text-xs-center pa-1">      
-            <no-ssr>
-              <adsbygoogle            
-                ad-slot="	3270443286"/>
-            </no-ssr>
-          </div>
+
+          <no-ssr>
+            <ad-component
+              google-ad-slot-id="3270443286"
+              adfit-desktop-unit="DAN-rhdaehiyvwom"
+              adfit-mobile-unit="DAN-1iaxnjnjggk12"
+              layout-type="column"
+            />
+          <!-- adfit 광고4 -->
+          </no-ssr>     
+         
           <music-sm-list 
             v-if="randomSongs.length > 0"
             ref="randomSong" 
@@ -84,21 +97,15 @@
       </v-flex>
     </v-layout>
     <v-container class="white">  
-      <div class="white text-xs-center pa-1">      
+      <div class="white text-xs-center pa-1">    
         <no-ssr>
-          <adfit-banner
-            style="margin:0 auto;display:block"
-            class="hidden-sm-and-down"
-            data-ad-test="N"
-            data-ad-unit="DAN-t4w6dr2ubfat"/>
-          <adfit-banner
-            style="margin:0 auto;display:block"
-            class="display-sm-and-up hidden-md-and-up"
-            data-ad-test="N"
-            data-ad-unit="DAN-1hbghscrx51kh"/>          
-          <adsbygoogle            
-            ad-slot="3270443286"/>
-        </no-ssr>
+          <ad-component
+            google-ad-slot-id="3270443286"
+            adfit-desktop-unit="DAN-t4w6dr2ubfat"
+            adfit-mobile-unit="DAN-1hbghscrx51kh"
+          />
+          <!-- adfit 광고1 -->
+        </no-ssr>     
       </div>
       <music-list 
         :songs="songs"
@@ -111,6 +118,7 @@
 </template>
 <script>
 import { mapMutations } from 'vuex'
+import AdComponent from '~/components/adv/AdComponent.vue'
 import MusicDetail from '~/components/music/MusicDetail.vue'
 import YoutubePlayer from '~/components/music/YoutubePlayer.vue'
 import MusicFurigana from '~/components/music/MusicFurigana.vue'
@@ -118,6 +126,7 @@ import MusicSmList from '~/components/music/MusicSmList.vue'
 import MusicList from '~/components/music/MusicList.vue'
 export default {
   components: {
+    AdComponent,
     MusicDetail,
     YoutubePlayer,
     MusicFurigana,
