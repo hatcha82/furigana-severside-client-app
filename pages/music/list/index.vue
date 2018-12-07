@@ -12,36 +12,51 @@
         placeholder="Search"
         hint="검색어: 제목, 아티스트"
       />
-      <div>
+
+      <div class="white text-xs-center pa-1">   
+        <v-layout wrap>
+          <v-flex
+            xs12
+            sm12
+            md6 
+            lg6
+          >
+            <no-ssr>
+              <adsbygoogle            
+                ad-slot="3270443286"/>
+            </no-ssr>
+          </v-flex>
+          <v-flex
+            xs12
+            sm12
+            md6 
+            lg6
+          >
+            <no-ssr>
+              <div class="pb-3">
+                <adfit-banner
+                  style="margin:0 auto;display:block"
+                  class="hidden-sm-and-down"
+                  data-ad-test="N"
+                  data-ad-unit="DAN-t4w6dr2ubfat"/>
+                <adfit-banner
+                  style="margin:0 auto;display:block"
+                  class="display-sm-and-up hidden-md-and-up"
+                  data-ad-test="N"
+                  data-ad-unit="DAN-1hbghscrx51kh"/>
+              </div>
+            </no-ssr>
+          </v-flex>
+        </v-layout>
+        <music-list 
+          ref="musicList" 
+          :songs="songs"
+        />
         <no-ssr>
-          <adsbygoogle            
-            ad-slot="3270443286"/>
+          <infinite-loading @infinite="infiniteHandler"/>
         </no-ssr>
       </div>
-    </div>
-    <no-ssr>
-      <div class="pb-3">
-        <adfit-banner
-          style="margin:0 auto;display:block"
-          class="hidden-sm-and-down"
-          data-ad-test="N"
-          data-ad-unit="DAN-t4w6dr2ubfat"/>
-        <adfit-banner
-          style="margin:0 auto;display:block"
-          class="display-sm-and-up hidden-md-and-up"
-          data-ad-test="N"
-          data-ad-unit="DAN-1hbghscrx51kh"/>
-      </div>
-    </no-ssr>
-    <music-list 
-      ref="musicList" 
-      :songs="songs"
-    />
-    <no-ssr>
-      <infinite-loading @infinite="infiniteHandler"/>
-    </no-ssr>
-  </div>
-</template>
+</div></div></template>
 <script>
 import { mapMutations } from 'vuex'
 import MusicList from '~/components/music/MusicList.vue'

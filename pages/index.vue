@@ -23,12 +23,7 @@
         :songs="randomSongs" 
         class="pa-3" 
         list-title="추천 J-pop"/> 
-      <div class="white text-xs-center pa-1">      
-        <no-ssr>
-          <adsbygoogle            
-            ad-slot="5199468592"/>
-        </no-ssr>
-      </div>
+      
       <router-link 
         to="/music/list" 
         class="pa-3"
@@ -41,22 +36,47 @@
           </v-btn>
       </div></router-link>
     </v-card>
-    <no-ssr>
-      <div class="white text-xs-center pa-1">      
-        <adfit-banner
-          style="margin:0 auto;display:block"
-          class="hidden-sm-and-down"
-          data-ad-test="N"
-          data-ad-unit="DAN-t4w6dr2ubfat"/>
-        <adfit-banner
-          style="margin:0 auto;display:block"
-          class="display-sm-and-up hidden-md-and-up"
-          data-ad-test="N"
-          data-ad-unit="DAN-1hbghscrx51kh"/>
-      </div>
-    </no-ssr>
+
+    <v-layout 
+      wrap 
+      class="white text-xs-center pa-1">
+      <v-flex
+        xs12
+        sm12
+        md6 
+        lg6
+      />
+      <no-ssr>
+        <adsbygoogle            
+          ad-slot="5199468592"/>
+      </no-ssr>
+      <v-flex
+        xs12
+        sm12
+        md6 
+        lg6
+      >
+        <no-ssr>
+          <div >      
+            <adfit-banner
+              style="margin:0 auto;display:block"
+              class="hidden-sm-and-down"
+              data-ad-test="N"
+              data-ad-unit="DAN-t4w6dr2ubfat"/>
+            <adfit-banner
+              style="margin:0 auto;display:block"
+              class="display-sm-and-up hidden-md-and-up"
+              data-ad-test="N"
+              data-ad-unit="DAN-1hbghscrx51kh"/>
+          </div>
+        </no-ssr>
+      </v-flex>
+    </v-layout>          
    
-    <v-card class="white">
+   
+    <v-card 
+      class="white" 
+      flat>
       <v-card-text class="text-xs-center">
         <v-icon 
           x-large 
