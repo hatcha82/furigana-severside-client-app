@@ -22,6 +22,11 @@ module.exports = {
         vmid: 'description',
         name: 'description',
         content: pkg.description
+      },
+      {
+        vmid: 'google-site-verification',
+        name: 'google-site-verification',
+        content: `viFX_6H-ntF_qnX5A5S180l8Rppy3anZ0AqpwdEO-k`
       }
     ],
     link: [
