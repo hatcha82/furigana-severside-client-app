@@ -119,7 +119,7 @@ export default {
       loadingSize: '20px',
       name: '',
       selectedVoice: null,
-      rate: 5,
+      rate: 3,
       volume: 5,
       pitch: 5,
       synth: window.speechSynthesis,

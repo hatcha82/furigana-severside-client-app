@@ -61,14 +61,20 @@ export default {
         },
         {
           icon: 'fas fa-music',
-          text: 'Music',
+          text: '음악',
           linkTo: 'music-list',
           params: {}
         },
         {
           icon: 'far fa-newspaper',
-          text: 'News',
+          text: '뉴스',
           linkTo: 'article-list',
+          params: {}
+        },
+        {
+          icon: 'fas fa-book',
+          text: '동화',
+          linkTo: 'douwa-list',
           params: {}
         }
         // {
