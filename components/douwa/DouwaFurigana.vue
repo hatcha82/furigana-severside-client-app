@@ -93,13 +93,10 @@
       </v-tab-item>
     </v-tabs>
     
-    <v-img 
-      :lazy-src="douwa.ImageUrl ? douwa.ImageUrl : require('../../assets/noImage.png')"
-      :src="douwa.ImageUrl ? douwa.ImageUrl : require('../../assets/noImage.png')"
-      height="30px"
-      contain
-    /><br>
-    <p class="ml-3 caption">      
+   
+    <p 
+      class="ml-3 caption" 
+      align="center">      
       <a 
         :href="douwa.linkUrl" 
         target="_blank"
@@ -153,11 +150,17 @@ h2.furigana {
   width: 80%;
   margin: 0 auto;
 }
+@media only screen and (max-width: 600px) {
+  .furigana p img {
+    width: 100%;
+  }
+}
+
 .furigana p {
   text-align: left;
 }
 .furigana rt {
   color: red;
-  font-size: 0.6em;
+  font-size: 0.8em;
 }
 </style>

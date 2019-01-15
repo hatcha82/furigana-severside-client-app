@@ -1,5 +1,5 @@
 <template>
-  <div ma-2>
+  <div>
     <no-ssr>
       <ad-component
         google-ad-slot-id="2920580186"
@@ -17,30 +17,29 @@
         row 
         class>
         <v-flex >
-          <v-card-title primary-title>
-            <div>
-              <v-icon  
-                left              
-                dark
-              >
-                fas fa-book
-              </v-icon> 
-              <div 
-                class="headline furigana  ml-0 mt-2" 
-                style="text-align:left"
-                v-html="douwa.titleFurigana"/>
-              <!-- <p 
+        
+          <div class="pa-3">
+            <v-icon  
+              left              
+              dark
+            >
+              fas fa-book
+            </v-icon> 
+            <span class="ml-2">{{ douwa.articleType |douwaType }}</span>
+
+            <div 
+              class="headline furigana  ml-0 mt-2" 
+              style="text-align:left"
+              v-html="douwa.titleFurigana"/>
+            <!-- <p 
                   class="furigana  ml-2" 
                   style="overflow: hidden;text-align:left"
                   
               </div> -->
-              <div>{{ douwa.articleType }}</div>
-              <div>(2013)</div>
-              <a 
-                :href="douwa.linkUrl" 
-                class="caption white--text lighten-1">원본 : {{ douwa.linkUrl }} </a><br>
-            </div>
-          </v-card-title>
+            <a 
+              :href="douwa.linkUrl" 
+              class="caption white--text lighten-1">원본 : {{ douwa.linkUrl }} </a><br>
+          </div>
         </v-flex>
       </v-layout>
       <v-divider light/>
@@ -109,6 +108,18 @@ import NewsList from '~/components/news/NewsList.vue'
 import Synthesis from '~/components/common/Synthesis.vue'
 export default {
   components: { DouwaFurigana, DouwaList, Synthesis, AdComponent },
+  filters: {
+    // Filter definitions
+    douwaType(value) {
+      var type = value
+      if (type == 'JPN01') {
+        return '일본 동화'
+      } else if (type == 'JPN02') {
+        return '세계 동화'
+      }
+      return type
+    }
+  },
   data() {
     return {
       searchKeyword: '',
@@ -146,6 +157,7 @@ export default {
       var params = {
         search: search,
         offset: this.offset,
+        updatedAt: this.douwa.updatedAt,
         limit: 10
       }
       var { data, count } = (await this.$axios.get('/douwas', {

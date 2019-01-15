@@ -26,13 +26,16 @@
               <router-link 
                 :key="item.id" 
                 :to="{ name: 'douwa-detail-id', params: { id: item.id}}"
+                class="ml-2"
                 style="text-decoration:none"               
                 tag="a">
-                <div
+                <!-- <div
                   :title="item.articleType"
                   style="text-align:left;text-decoration:none"
                   class="ml-2 furigana subheading white--text text-left" 
-                  v-html="item.articleType"/>
+                  v-html="item.articleType"/> -->
+                {{ item.articleType | douwaType }}
+                <!-- {{ item.episod }} -->
               </router-link>
               <!-- <span class="title font-weight-light pl-1">
                 {{ item.articleType }}
@@ -62,7 +65,7 @@
                   </v-list-tile-avatar>
                   <v-list-tile-content class="pl-0 ">
                     <p 
-                      class="furigana ml-2 "                       
+                      class="furigana ml-2 mr-2"                       
                       v-html="item.titleFurigana"/>
                     <v-list-tile-sub-title />
                   </v-list-tile-content>
@@ -84,6 +87,18 @@
 </template>
 <script>
 export default {
+  filters: {
+    // Filter definitions
+    douwaType(value) {
+      var type = value
+      if (type == 'JPN01') {
+        return '일본 동화'
+      } else if (type == 'JPN02') {
+        return '세계 동화'
+      }
+      return type
+    }
+  },
   props: {
     listTitle: { type: String, default: '' },
     douwas: { type: Array, default: null }
