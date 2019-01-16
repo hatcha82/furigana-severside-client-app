@@ -7,6 +7,7 @@
       sm12
       md6 
       lg6
+      class="pt-1 pb-1"
     >
       <adsbygoogle            
         :ad-slot="googleAdSlotId"/>
@@ -16,6 +17,7 @@
       sm12
       md6 
       lg6
+      class="pt-1 pb-1"
     >
       <adfit-banner
         :data-ad-unit="adfitDesktopUnit"
