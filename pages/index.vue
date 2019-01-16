@@ -45,35 +45,16 @@
         sm12
         md6 
         lg6
-      />
-      <no-ssr>
-        <adsbygoogle            
-          ad-slot="5199468592"/>
-      </no-ssr>
-      <v-flex
-        xs12
-        sm12
-        md6 
-        lg6
       >
         <no-ssr>
-          <div >      
-            <adfit-banner
-              style="margin:0 auto;display:block"
-              class="hidden-sm-and-down"
-              data-ad-test="N"
-              data-ad-unit="DAN-t4w6dr2ubfat"/>
-            <adfit-banner
-              style="margin:0 auto;display:block"
-              class="display-sm-and-up hidden-md-and-up"
-              data-ad-test="N"
-              data-ad-unit="DAN-1hbghscrx51kh"/>
-          </div>
-        </no-ssr>
+          <ad-component
+            google-ad-slot-id="3270443286"
+            adfit-desktop-unit="DAN-t4w6dr2ubfat"
+            adfit-mobile-unit="DAN-1hbghscrx51kh"
+          />
+        </no-ssr>   
       </v-flex>
     </v-layout>          
-   
-   
     <v-card 
       class="white" 
       flat>
@@ -107,9 +88,12 @@
       </div>
       <div class="white text-xs-center pa-1">      
         <no-ssr>
-          <adsbygoogle            
-            ad-slot="2185673891"/>
-        </no-ssr>
+          <ad-component
+            google-ad-slot-id="2920580186"
+            adfit-desktop-unit="DAN-t4w6dr2ubfat"
+            adfit-mobile-unit="DAN-1hbghscrx51kh"
+          />
+        </no-ssr>      
       </div>
       <router-link 
         to="/article/list" 
