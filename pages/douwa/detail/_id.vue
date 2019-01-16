@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div align-center>
+    <div>
       <no-ssr>
         <ad-component
           google-ad-slot-id="2920580186"
           adfit-desktop-unit="DAN-t4w6dr2ubfat" 
           adfit-mobile-unit="DAN-1hbghscrx51kh"    
-          layout-type="row"                  
+          layout-type="wrap"                  
         />        
       </no-ssr>
     </div>
