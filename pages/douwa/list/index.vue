@@ -11,13 +11,13 @@
         placeholder="Search"
         hint="검색어: 일본어 제목, 번역 제목"
       />
-      <!-- <no-ssr>
+      <no-ssr>
         <ad-component
           google-ad-slot-id="2920580186"
           adfit-desktop-unit="DAN-t4w6dr2ubfat"
           adfit-mobile-unit="DAN-1hbghscrx51kh"
         />
-      </no-ssr>      -->
+      </no-ssr>     
       <douwa-list 
         ref="douwaList"        
         :douwas="douwas"
