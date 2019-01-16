@@ -1,14 +1,14 @@
 <template>
   <div>
     
-    <no-ssr>
+    <!-- <no-ssr>
       <ad-component
         google-ad-slot-id="2920580186"
         adfit-desktop-unit="DAN-t4w6dr2ubfat" 
         adfit-mobile-unit="DAN-1hbghscrx51kh"    
         layout-type="wrap"                  
       />        
-    </no-ssr>     
+    </no-ssr>      -->
     <v-card flat>
       <v-card-title>
         <v-layout wrap>

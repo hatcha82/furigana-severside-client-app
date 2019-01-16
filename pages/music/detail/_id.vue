@@ -4,7 +4,7 @@
     <v-layout 
       wrap 
     >
-      <v-flex 
+      <!-- <v-flex 
         xs12
         sm12
         md12 
@@ -16,10 +16,9 @@
               adfit-desktop-unit="DAN-u7u2dizil640" 
               adfit-mobile-unit="DAN-vbk8dw9dcxfd"            
             /> 
-            <!-- adfit 광고2 -->
           </div>
         </no-ssr>
-      </v-flex>
+      </v-flex> -->
       <v-flex 
         xs12
         sm6

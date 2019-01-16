@@ -1,13 +1,13 @@
 <template>
   <div class="">
-    <no-ssr>
+    <!-- <no-ssr>
       <ad-component
         google-ad-slot-id="7322450504"
         adfit-desktop-unit="DAN-1h7zrmefbegc0"
         adfit-mobile-unit="DAN-1h84t5wt7s2ue"
         layout-type="wrap"
       />
-    </no-ssr>
+    </no-ssr> -->
     <v-card class="white">
       <v-parallax 
         :src="require(`../assets/bg/bg00${Math.floor(Math.random() * 8) +1 }.jpg`)" 
@@ -82,16 +82,7 @@
           class="newsIcon" 
           src="https://s.yimg.jp/images/news/cobranding/fnn.png">
       </div>
-      <div class="white text-xs-center pa-1">      
-        <no-ssr>
-          <ad-component
-            google-ad-slot-id="5563055391"
-            adfit-desktop-unit="DAN-u7u2dizil640" 
-            adfit-mobile-unit="DAN-vbk8dw9dcxfd"  
-            layout-type="wrap"    
-          />
-        </no-ssr>
-      </div>
+     
       <router-link 
         to="/article/list" 
         class="pa-3"
@@ -104,6 +95,16 @@
           </v-btn>
       </div></router-link>
     </v-card>
+    <div class="white text-xs-center pa-1">      
+      <no-ssr>
+        <ad-component
+          google-ad-slot-id="5563055391"
+          adfit-desktop-unit="DAN-u7u2dizil640" 
+          adfit-mobile-unit="DAN-vbk8dw9dcxfd"  
+          layout-type="wrap"    
+        />
+      </no-ssr>
+    </div>
   </div>
 </template>
 

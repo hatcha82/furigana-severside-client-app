@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <!-- <div>
       <no-ssr>
         <ad-component
           google-ad-slot-id="2920580186"
@@ -9,7 +9,7 @@
           layout-type="wrap"                  
         />        
       </no-ssr>
-    </div>
+    </div> -->
     <v-card
       color="white"
      
