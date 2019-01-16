@@ -75,7 +75,7 @@
             google-ad-slot-id="5563055391"
             adfit-desktop-unit="DAN-u7u2dizil640" 
             adfit-mobile-unit="DAN-vbk8dw9dcxfd"  
-            layout-type="column"          
+            layout-type="wrap"          
           /> 
           <!-- adfit 광고2 -->
           <!-- <ad-component
