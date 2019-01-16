@@ -75,19 +75,21 @@
           <v-card-text>  
             <h1 
               class="furigana" 
-              v-html="douwa.titleTranslate"/>  
-            <span class="publishedDate"> {{ douwa.newsPublishedDate | moment("YYYY. MM. DD dddd, h:mm:ss a") }} </span>
-            <v-img 
-              :lazy-src="douwa.newsImageUr ? douwa.newsImageUrl : require('~/assets/noImage.png')" 
-              :src="douwa.newsImageUrl ? douwa.newsImageUrl : require('~/assets/noImage.png')" 
-              height="200" 
-              contain 
-              position="left"
-              class="ml-3"
-            />          
+              v-html="douwa.titleTranslate"/>            
+            <div class="furigana" >
+              <p>
+                <img 
+                  :lazy-src="douwa.ImageUrl ? douwa.ImageUrl : require('~/assets/noImage.png')" 
+                  :src="douwa.ImageUrl ? douwa.ImageUrl : require('~/assets/noImage.png')"               
+                  
+                >  
+              </p>        
+            </div>
+            
             <div 
               class="furigana" 
-              v-html="douwa.translateText"/>
+              v-html="$options.filters.lineTrim(douwa.translateText)"/>
+            
           </v-card-text>  
         </v-card>
       </v-tab-item>
@@ -110,15 +112,26 @@ export default {
   filters: {
     withTranslate(furigana, traslate) {
       var html = ''
+      if (!traslate) return furigana
       var furiganaArray = furigana.split('\n')
       var traslateArray = traslate.split('\n')
       for (let [index, line] of furiganaArray.entries()) {
-        var trans = traslateArray[index] ? traslateArray[index] : ''
         var furiganaText = line ? line : ''
-        html += furiganaText
+
+        var trans = traslateArray[index] ? traslateArray[index] : ''
+        html += furiganaText.replace(/<br>/gi, '').trim()
         html += '\n'
-        html += `<span style='color:#aaa;font-size:0.9em'>${trans}</span>`
+        html += `<span style='color:#aaa;font-size:0.9em'>${trans.trim()}</span><br>`
         html += '\n'
+      }
+      return html
+    },
+    lineTrim(traslate) {
+      var html = ''
+      if (!traslate) return ''
+      var traslateArray = traslate.split('\n')
+      for (let [index, line] of traslateArray.entries()) {
+        html += `${line.trim()}<br>`
       }
       return html
     }

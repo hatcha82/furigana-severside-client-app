@@ -9,14 +9,14 @@
           xs12
           sm6
           md4 
-          lg3>
+          lg4>
           <v-card 
             class="ma-2" 
           >  
             
             <v-card-title 
               class="accent" 
-              style="height:80px;">
+              style="height:40px;">
               <v-icon  
                 left              
                 dark
@@ -51,7 +51,8 @@
                 tag="a">
                 <v-list-tile
                   :key="item.id"
-                  avatar            
+                  avatar
+                  height="200px"            
                 >
                   <v-list-tile-avatar 
                     tile 
@@ -65,18 +66,25 @@
                   </v-list-tile-avatar>
                   <v-list-tile-content class="pl-0 ">
                     <p 
-                      class="furigana ml-2 mr-2"                       
+                      class="furigana ml-2 mr-2" 
+                      style="font-size:1em;"                      
                       v-html="item.titleFurigana"/>
-                    <v-list-tile-sub-title />
+                    <v-list-tile-sub-title class="ml-2">
+                      {{ item.titleTranslate }}
+                    </v-list-tile-sub-title>
                   </v-list-tile-content>
                 </v-list-tile>
               </router-link>
             </v-list>
             <div class="pb-4">
               <p 
-                class="furigana caption ml-2 mr-2"             
+                class="furigana caption ml-2 mr-2 "             
                 style="height:50px;overflow:hidden;text-align:left;"
-                v-html="item.articelOnlyText"/>
+                v-html="$options.filters.moreReadDot(item.articelOnlyText)"/>
+              <p 
+                class="furigana caption ml-2 mr-3 font-italic"             
+                style="height:50px;overflow:hidden;text-align:left;"
+                v-html="$options.filters.moreReadDot(item.translateText) "/>
             </div>
           </v-card>
       
@@ -95,8 +103,15 @@ export default {
         return '일본 동화'
       } else if (type == 'JPN02') {
         return '세계 동화'
+      } else if (type == 'JPN03') {
+        return '세계 동화'
+      } else if (type == 'JPN04') {
+        return '이솝 우화'
       }
       return type
+    },
+    moreReadDot(value) {
+      return value ? value + '...' : '...'
     }
   },
   props: {

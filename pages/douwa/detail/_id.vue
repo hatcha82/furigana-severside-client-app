@@ -1,57 +1,56 @@
 <template>
   <div>
-    <no-ssr>
-      <ad-component
-        google-ad-slot-id="2920580186"
-        adfit-desktop-unit="DAN-t4w6dr2ubfat" 
-        adfit-mobile-unit="DAN-1hbghscrx51kh"    
-        layout-type="column"                  
-      />        
-    </no-ssr>
-
+    <div align-center>
+      <no-ssr>
+        <ad-component
+          google-ad-slot-id="2920580186"
+          adfit-desktop-unit="DAN-t4w6dr2ubfat" 
+          adfit-mobile-unit="DAN-1hbghscrx51kh"    
+          layout-type="row"                  
+        />        
+      </no-ssr>
+    </div>
     <v-card
-      color="accent"
-      class="white--text"
+      color="white"
+     
     >
+      <div class=" pa-3 primary white--text">
+        <v-icon  
+          left
+          dark                      
+        >
+          fas fa-book
+        </v-icon> 
+        <span class="ml-2">{{ douwa.articleType |douwaType }}</span>
+      </div>
       <v-layout 
         row 
         class>
         <v-flex >
-        
-          <div class="pa-3">
-            <v-icon  
-              left              
-              dark
-            >
-              fas fa-book
-            </v-icon> 
-            <span class="ml-2">{{ douwa.articleType |douwaType }}</span>
-
+          <div class="pa-3 ">
+            
             <div 
-              class="headline furigana  ml-0 mt-2" 
+              class="headline primary--text furigana  ml-0 mt-2" 
               style="text-align:left"
               v-html="douwa.titleFurigana"/>
-            <!-- <p 
-                  class="furigana  ml-2" 
-                  style="overflow: hidden;text-align:left"
-                  
-              </div> -->
             <a 
               :href="douwa.linkUrl" 
-              class="caption white--text lighten-1">원본 : {{ douwa.linkUrl }} </a><br>
-          </div>
-        </v-flex>
+              target="_blank"
+              class="caption lighten-1">원본 : {{ douwa.linkUrl }} </a><br><br>
+           
+            <div class="white"> 
+              <no-ssr>
+                <Synthesis 
+                  :text="douwa.article" 
+                  class=""/>
+              </no-ssr>
+            </div>
+        </div></v-flex>
       </v-layout>
-      <v-divider light/>
-      <v-card-actions 
-        class="pa-3 white" 
-        color="">
-        <no-ssr>
-          <Synthesis 
-            :text="douwa.article" 
-            class=""/>
-        </no-ssr>
-      </v-card-actions>
+      <!-- <v-divider light/> -->
+      <!-- <v-card-actions 
+        class="pa-3" 
+        color=""/> -->
     </v-card>
     <v-layout 
       wrap 
@@ -73,7 +72,7 @@
         <no-ssr>      
          
           <ad-component
-            google-ad-slot-id="6603183638"
+            google-ad-slot-id="5563055391"
             adfit-desktop-unit="DAN-u7u2dizil640" 
             adfit-mobile-unit="DAN-vbk8dw9dcxfd"  
             layout-type="column"          
@@ -112,10 +111,15 @@ export default {
     // Filter definitions
     douwaType(value) {
       var type = value
+
       if (type == 'JPN01') {
         return '일본 동화'
       } else if (type == 'JPN02') {
         return '세계 동화'
+      } else if (type == 'JPN03') {
+        return '세계 동화'
+      } else if (type == 'JPN04') {
+        return '이솝 우화'
       }
       return type
     }

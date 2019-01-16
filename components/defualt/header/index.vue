@@ -4,7 +4,7 @@
       :mini-variant="miniVariant"
       :clipped="$vuetify.breakpoint.mdAndUp"
       v-model="drawer"
-      fixed
+      fixed      
       app      
     >
       <v-list dense>
@@ -28,6 +28,7 @@
       :clipped-left="$vuetify.breakpoint.mdAndUp"
       fixed
       app
+      flat
       dark
       class="primary"
     >
