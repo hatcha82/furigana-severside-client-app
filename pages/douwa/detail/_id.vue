@@ -41,7 +41,7 @@
             <div class="white"> 
               <no-ssr>
                 <Synthesis 
-                  :text="douwa.article" 
+                  :text="douwa.articelOnlyText" 
                   class=""/>
               </no-ssr>
             </div>
