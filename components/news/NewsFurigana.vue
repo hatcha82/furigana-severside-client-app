@@ -40,15 +40,14 @@
             <h2 
               class="furigana" 
               v-html="article.titleTranslate"/>
-            <span class="publishedDate"> {{ article.newsPublishedDate | moment("YYYY. MM. DD dddd, h:mm:ss a") }} </span>
-            <v-img 
-              :lazy-src="article.newsImageUr ? article.newsImageUrl : require('~/assets/noImage.png')" 
-              :src="article.newsImageUrl ? article.newsImageUrl : require('~/assets/noImage.png')" 
-              height="200" 
-              contain 
-              position="left"
-              class="ml-3 mt-2"
-            />
+            <div class="furigana pl-3" >
+              <p>
+                <img 
+                  :src="article.newsImageUrl ? article.newsImageUrl : require('~/assets/noImage.png')" 
+                  height="200"              
+                >          
+              </p>
+            </div>
             <div 
               class="furigana" 
               v-html="$options.filters.withTranslate(article.furigana, article.translateText)"/>
@@ -61,16 +60,15 @@
             <h1 
               class="furigana" 
               v-html="article.titleFurigana"/>
-            <span class="publishedDate"> {{ article.newsPublishedDate | moment("YYYY. MM. DD dddd, h:mm:ss a") }} </span>
-            <v-img 
-              :lazy-src="article.newsImageUr ? article.newsImageUrl : require('~/assets/noImage.png')" 
-              :src="article.newsImageUrl ? article.newsImageUrl : require('~/assets/noImage.png')" 
-              height="200" 
-              contain 
-              position="left"
-              class="ml-3"
-            />
             
+            <div class="furigana pl-3" >
+              <p>
+                <img 
+                  :src="article.newsImageUrl ? article.newsImageUrl : require('~/assets/noImage.png')" 
+                  height="200"              
+                >          
+              </p>
+            </div>
             <div 
               class="furigana" 
               v-html="article.furigana"/>
@@ -83,15 +81,14 @@
             <h1 
               class="furigana" 
               v-html="article.title"/>
-            <span class="publishedDate"> {{ article.newsPublishedDate | moment("YYYY. MM. DD dddd, h:mm:ss a") }} </span>
-            <v-img 
-              :lazy-src="article.newsImageUr ? article.newsImageUrl : require('~/assets/noImage.png')" 
-              :src="article.newsImageUrl ? article.newsImageUrl : require('~/assets/noImage.png')" 
-              height="200" 
-              contain 
-              position="left"
-              class="ml-3"
-            />
+            <div class="furigana pl-3" >
+              <p>
+                <img 
+                  :src="article.newsImageUrl ? article.newsImageUrl : require('~/assets/noImage.png')" 
+                  height="200"              
+                >          
+              </p>
+            </div>
             <div 
               class="furigana" 
               v-html="article.article"/>
@@ -104,15 +101,14 @@
             <h1 
               class="furigana" 
               v-html="article.titleTranslate"/>  
-            <span class="publishedDate"> {{ article.newsPublishedDate | moment("YYYY. MM. DD dddd, h:mm:ss a") }} </span>
-            <v-img 
-              :lazy-src="article.newsImageUr ? article.newsImageUrl : require('~/assets/noImage.png')" 
-              :src="article.newsImageUrl ? article.newsImageUrl : require('~/assets/noImage.png')" 
-              height="200" 
-              contain 
-              position="left"
-              class="ml-3"
-            />          
+            <div class="furigana pl-3" >
+              <p>
+                <img 
+                  :src="article.newsImageUrl ? article.newsImageUrl : require('~/assets/noImage.png')" 
+                  height="200"              
+                >          
+              </p>
+            </div>
             <div 
               class="furigana" 
               v-html="article.translateText"/>
@@ -120,22 +116,23 @@
         </v-card>
       </v-tab-item>
     </v-tabs>
-    
-    <v-img 
-      :lazy-src="article.newsPubllisherImageUrl ? article.newsPubllisherImageUrl : require('../../assets/noImage.png')"
-      :src="article.newsPubllisherImageUrl ? article.newsPubllisherImageUrl : require('../../assets/noImage.png')"
-      height="30px"
-      contain
-    /><br>
-    <p class="ml-3 caption">
-      Published Date : {{ article.newsPublishedDate | moment("YYYY. MM. DD dddd, h:mm:ss a") }} 
-      <br>
-      <a 
-        :href="article.newsUrl" 
-        target="_blank"
-        class="caption grey--text lighten-1">원본 : {{ article.newsUrl }} </a>
-    </p>
-    <br>   
+    <div class="furigana pl-3" >
+      <p>
+        <br>
+        <img 
+          :src="article.newsPubllisherImageUrl ? article.newsPubllisherImageUrl : require('../../assets/noImage.png')"
+          height="30px"              
+        > 
+        <span class="ml-3 caption">
+          Published Date : {{ article.newsPublishedDate | moment("YYYY. MM. DD dddd, h:mm:ss a") }}         
+        </span>
+        <a 
+          :href="article.newsUrl" 
+          target="_blank"
+          class="caption grey--text lighten-1">원본 : {{ article.newsUrl }} </a>
+      </p>
+      
+    </div>
   </div>  
 </template>
 <script>
@@ -180,6 +177,13 @@ h2.furigana {
   line-height: 2em;
   font-size: 1.2em;
   white-space: pre-line;
+  width: 80%;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+  .furigana p img {
+    width: 100%;
+  }
 }
 .furigana rt {
   color: red;

@@ -10,54 +10,87 @@
           sm6
           md4 
           lg3>
-          <v-card flat>          
-            <v-list class="pa-1 mb-1">
-              <router-link 
-                :to="{ name: 'music-detail-id', params: { id: item.id}}" 
-                tag="a">
-                <v-img        
-                  :lazy-src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"  
+          <router-link 
+            :to="{ name: 'music-detail-id', params: { id: item.id}}" 
+            style="text-decoration:none"
+            tag="a">
+            <v-card
+              class="mx-auto ma-2"
+              max-height="450"
+              
+            >
+              <v-card-title 
+                class="primary white--text pa-2" 
+              >  
+                <v-list-tile class="grow">
+                  <v-list-tile-avatar color="grey darken-3">
+                    
+                    <v-img
+                      :src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"
+                      class="elevation-6"
+                    />
+                  </v-list-tile-avatar>
+
+                  <v-list-tile-content>
+                    <v-icon
+                      small
+                      dark
+                      right
+                    >
+                      fas fa-music
+                    </v-icon>
+                    <v-list-tile-title>{{ item.artist }}</v-list-tile-title>
+                  </v-list-tile-content>
+
+                  <v-layout
+                    align-center
+                    justify-end
+                  >
+                    <!-- <v-icon class="mr-1">mdi-heart</v-icon>
+                    <span class="subheading mr-2">256</span>
+                    <span class="mr-1">·</span>
+                    <v-icon class="mr-1">mdi-share-variant</v-icon>
+                    <span class="subheading">45</span> -->
+                  </v-layout>
+                </v-list-tile>
+              
+              </v-card-title>
+            
+              <v-card-text 
+                :title="item.title" 
+                class="title primary--text text-truncate text-center">{{ item.title }}</v-card-text >
+              <v-img        
+                :lazy-src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"  
+                :src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"
+                class="white--text mt-3 songCardImage ml-2 mr-2"     
+                height="150px"                              
+                conver
+                align-left>
+                <img
                   :src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"
-                  class="white--text ma-0 songCardImage"     
-                  height="100px"             
-                  conver
+                  class="elevation-6 ma-4"
+                  width="100px"
+                  
+                  
                 >
-                  <div 
-                    :title="`${item.artist} - ${item.title}`" 
-                    class="songCard" />
-                  <div 
-                    :title="`${item.artist} - ${item.title}`" 
-                    class="songDesc">
-                    <v-subheader
-                      v-if="item.header"
-                      :key="item.header"
-                    >
-                      {{ item.header }}
-                    </v-subheader>
-                    <v-list-tile
-                      v-else
-                      :key="item.title"
-                      avatar            
-                    >
-                      <v-list-tile-avatar>
-                        <v-img
-                          :lazy-src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"  
-                          :src="item.albumImageUrl ? item.albumImageUrl : require('~/assets/noImage.png')"/> 
-                      </v-list-tile-avatar>
-                      <v-list-tile-content>
-                        <v-list-tile-title 
-                          class="white--text" 
-                          v-html="item.title"/>
-                        <v-list-tile-sub-title 
-                          class="white--text" 
-                          v-html="item.artist"/>
-                      </v-list-tile-content>
-                    </v-list-tile>
-                  </div>
-                </v-img>
-              </router-link>
-            </v-list>
-          </v-card>
+              </v-img>
+              <v-card-actions/>
+              <v-card-text 
+                v-if= "item.lyrics"
+                :title="item.lyrics" 
+                class="caption text-truncate">
+                {{ item.lyrics }}
+              </v-card-text>
+              <v-card-text 
+                v-if= "item.lyricsKor"
+                :title="item.lyricsKor" 
+                class="caption  text-truncate">
+                {{ item.lyricsKor }}
+              </v-card-text>
+              
+            </v-card>
+            
+          </router-link>
         </v-flex>
       </template>
     </v-layout>   
@@ -75,7 +108,6 @@ export default {
 </script>
 <style scope>
 .songCard {
-  position: absolute;
   bottom: 0px;
   width: 100%;
   cursor: pointer;
@@ -83,14 +115,12 @@ export default {
 .songCard:hover {
 }
 .songDesc {
-  position: absolute;
   width: 100%;
-  bottom: 0px;
 }
 .songDesc:hover {
-  background: black;
-  opacity: 0.9;
+  cursor: pointer;
 }
+
 .songCardImage:hover {
   cursor: pointer;
   opacity: 0.9;

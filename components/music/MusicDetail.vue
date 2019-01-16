@@ -63,6 +63,11 @@ export default {
   props: {
     song: { type: Object, default: null },
     ituneInfo: { type: Object, default: null }
+  },
+  data() {
+    return {
+      edit: false
+    }
   }
 }
 </script>

@@ -26,7 +26,7 @@
               <router-link 
                 :key="item.id" 
                 :to="{ name: 'douwa-detail-id', params: { id: item.id}}"
-                class="ml-2"
+                class="ml-2 white--text"
                 style="text-decoration:none"               
                 tag="a">
                 <!-- <div

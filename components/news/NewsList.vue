@@ -10,9 +10,21 @@
           sm12
           md6 
           lg4>
-          <v-card 
-            flat 
-            class="ml-1 mr-1 mb-1">          
+          <v-card              
+            class="ma-2">  
+            
+            <v-card-title 
+              class="accent" 
+              style="height:40px;">
+              <img 
+                :lazy-src="item.newsPubllisherImageUrl ? item.newsPubllisherImageUrl : require('../../assets/noImage.png')"
+                :src="item.newsPubllisherImageUrl ? item.newsPubllisherImageUrl : require('../../assets/noImage.png')"
+                style="postion:absolute;width:80px;margin-left:0px" 
+              >
+              <span class="caption white--text text-no-wrap ml-2">
+                {{ item.newsPublishedDate | moment("YYYY. MM. DD dddd, h:mm:ss a") }} 
+              </span>
+            </v-card-title>        
             <v-list 
               three-line 
               class="pa-0">
@@ -41,20 +53,24 @@
                     <v-list-tile-title class="text-no-wrap caption">
                       {{ item.titleTranslate }}
                     </v-list-tile-title >
-                    <v-list-tile-sub-title >
-                      <img 
-                        :lazy-src="item.newsPubllisherImageUrl ? item.newsPubllisherImageUrl : require('../../assets/noImage.png')"
-                        :src="item.newsPubllisherImageUrl ? item.newsPubllisherImageUrl : require('../../assets/noImage.png')"
-                        style="postion:absolute;width:30px;margin-left:2px" 
-                      >
-                      <span class="caption text-no-wrap">
-                        {{ item.newsPublishedDate | moment("YYYY. MM. DD dddd, h:mm:ss a") }} 
-                      </span>
-                    </v-list-tile-sub-title>
+                    <v-list-tile-sub-title />
                   </v-list-tile-content>
                 </v-list-tile>
               </router-link>
             </v-list>
+            <div class="pb-2">
+              <p
+                v-if="item.article" 
+                class="furigana caption ml-2 mr-2 "             
+                style="height:50px;overflow:hidden;text-align:left;"
+                v-html="$options.filters.moreReadDot(item.article)"/>
+              <p 
+                v-if="item.translateText" 
+                class="furigana caption ml-2 mr-3 font-italic"             
+                style="height:50px;overflow:hidden;text-align:left;"
+                v-html="$options.filters.moreReadDot(item.translateText) "/>
+            </div>
+            
           </v-card>
       
         </v-flex>
@@ -64,6 +80,11 @@
 </template>
 <script>
 export default {
+  filters: {
+    moreReadDot(value) {
+      return value ? value + '...' : '...'
+    }
+  },
   props: {
     listTitle: { type: String, default: '' },
     articles: { type: Array, default: null }

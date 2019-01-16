@@ -88,6 +88,11 @@ export default {
   },
   props: {
     song: { type: Object, default: null }
+  },
+  data() {
+    return {
+      activeTab: 0
+    }
   }
 }
 </script>
