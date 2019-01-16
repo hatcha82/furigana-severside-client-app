@@ -3,7 +3,7 @@
     <v-card class="white">
       <v-parallax 
         :src="require(`../assets/bg/bg00${Math.floor(Math.random() * 8) +1 }.jpg`)" 
-        height ="400">
+        height ="250">
         <FuriganaLogoIndexPage class="pt-5"/>
       </v-parallax>
     </v-card>
@@ -36,25 +36,13 @@
           </v-btn>
       </div></router-link>
     </v-card>
-
-    <v-layout 
-      wrap 
-      class="white text-xs-center pa-1">
-      <v-flex
-        xs12
-        sm12
-        md6 
-        lg6
-      >
-        <no-ssr>
-          <ad-component
-            google-ad-slot-id="3270443286"
-            adfit-desktop-unit="DAN-t4w6dr2ubfat"
-            adfit-mobile-unit="DAN-1hbghscrx51kh"
-          />
-        </no-ssr>   
-      </v-flex>
-    </v-layout>          
+    <no-ssr>
+      <ad-component
+        google-ad-slot-id="2920580186"
+        adfit-desktop-unit="DAN-t4w6dr2ubfat"
+        adfit-mobile-unit="DAN-1hbghscrx51kh"
+      />
+    </no-ssr>        
     <v-card 
       class="white" 
       flat>
@@ -89,11 +77,12 @@
       <div class="white text-xs-center pa-1">      
         <no-ssr>
           <ad-component
-            google-ad-slot-id="2920580186"
-            adfit-desktop-unit="DAN-t4w6dr2ubfat"
-            adfit-mobile-unit="DAN-1hbghscrx51kh"
+            google-ad-slot-id="5563055391"
+            adfit-desktop-unit="DAN-1h7zrmefbegc0" 
+            adfit-mobile-unit="DAN-1h84t5wt7s2ue"  
+            layout-type="wrap"    
           />
-        </no-ssr>      
+        </no-ssr>
       </div>
       <router-link 
         to="/article/list" 
@@ -107,11 +96,11 @@
           </v-btn>
       </div></router-link>
     </v-card>
-      
   </div>
 </template>
 
 <script>
+import AdComponent from '~/components/adv/AdComponent.vue'
 import FuriganaLogoIndexPage from '~/components/FuriganaLogoIndexPage.vue'
 import MusicList from '~/components/music/MusicList.vue'
 import NewsList from '~/components/news/NewsList.vue'
@@ -120,6 +109,7 @@ import imageAd from '~/components/adv/adfit/imageAd.vue'
 export default {
   components: {
     FuriganaLogoIndexPage,
+    AdComponent,
     MusicList,
     NewsList,
     imageAd

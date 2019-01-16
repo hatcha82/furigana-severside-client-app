@@ -9,7 +9,7 @@
       class="FuriganaHubLogo"
       src="~/assets/logoBlue.jpg"
       alt="Vuetify.js" 
-      height="150" 
+      height="100" 
     >
     <h1 class="white--text mt-2 mb-2 display-1 text-xs-center font-weight-black">FuriganaHub</h1>
     <div class="subheading mb-3 text-xs-center " >일본어를 쉽게 읽어 봅시다.</div>
