@@ -1,5 +1,13 @@
 <template>
   <div class="">
+    <no-ssr>
+      <ad-component
+        google-ad-slot-id="7322450504"
+        adfit-desktop-unit="DAN-1h7zrmefbegc0"
+        adfit-mobile-unit="DAN-1h84t5wt7s2ue"
+        layout-type="wrap"
+      />
+    </no-ssr>
     <v-card class="white">
       <v-parallax 
         :src="require(`../assets/bg/bg00${Math.floor(Math.random() * 8) +1 }.jpg`)" 
@@ -78,8 +86,8 @@
         <no-ssr>
           <ad-component
             google-ad-slot-id="5563055391"
-            adfit-desktop-unit="DAN-1h7zrmefbegc0" 
-            adfit-mobile-unit="DAN-1h84t5wt7s2ue"  
+            adfit-desktop-unit="DAN-u7u2dizil640" 
+            adfit-mobile-unit="DAN-vbk8dw9dcxfd"  
             layout-type="wrap"    
           />
         </no-ssr>
