@@ -201,9 +201,9 @@ export default {
         {
           vmid: 'description',
           name: 'description',
-          content: this.douwa.douwa + '\n' + (this.douwa.translateText || '')
+          content: this.douwa.article + '\n' + (this.douwa.translateText || '')
         },
-        { vmid: 'og:type', property: 'og:type', content: 'douwa' },
+        { vmid: 'og:type', property: 'og:type', content: 'article' },
         {
           vmid: 'og:title',
           property: 'og:title',
@@ -213,7 +213,7 @@ export default {
         {
           vmid: 'og:url',
           property: 'og:url',
-          content: `www.furiganahub.com//news/detail/${this.douwa.id}`
+          content: `www.furiganahub.com//douwa/detail/${this.douwa.id}`
         },
         {
           vmid: 'og:description',
