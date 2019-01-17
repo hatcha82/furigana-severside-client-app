@@ -201,7 +201,8 @@ export default {
         {
           vmid: 'description',
           name: 'description',
-          content: this.douwa.article + '\n' + (this.douwa.translateText || '')
+          content:
+            this.douwa.articelOnlyText + '\n' + (this.douwa.translateText || '')
         },
         { vmid: 'og:type', property: 'og:type', content: 'article' },
         {
@@ -242,7 +243,8 @@ export default {
         {
           vmid: 'twitter:description',
           name: 'twitter:description',
-          content: this.douwa.douwa + '\n' + (this.douwa.translateText || '')
+          content:
+            this.douwa.articelOnlyText + '\n' + (this.douwa.translateText || '')
         },
         {
           vmid: 'twitter:image',
