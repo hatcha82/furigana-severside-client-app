@@ -1,65 +1,26 @@
 <template>
   <div class="">
-    <!-- <no-ssr>
+    <v-card class="white">
+      <v-parallax 
+        :src="require(`../assets/bg/bg00${Math.floor(Math.random() * 8) +1 }.jpg`)" 
+        height ="200">
+        <FuriganaLogoIndexPage class="pt-3"/>
+      </v-parallax>
+    </v-card>
+    <no-ssr>
       <ad-component
         google-ad-slot-id="7322450504"
         adfit-desktop-unit="DAN-1h7zrmefbegc0"
         adfit-mobile-unit="DAN-1h84t5wt7s2ue"
         layout-type="wrap"
       />
-    </no-ssr> -->
-    <v-card class="white">
-      <v-parallax 
-        :src="require(`../assets/bg/bg00${Math.floor(Math.random() * 8) +1 }.jpg`)" 
-        height ="250">
-        <FuriganaLogoIndexPage class="pt-5"/>
-      </v-parallax>
-    </v-card>
-    <v-card 
-      class="white" 
-      flat> 
-      <v-card-text class="text-xs-center">
-        <v-icon 
-          x-large 
-          class="blue--text text--lighten-2">fas fa-music</v-icon>
-      </v-card-text>
-      <v-card-text class="text-xs-center">
-        80년도에서 최신 J-pop 7000여곡의 노래를 후리가나를 읽으면서 일본어를 배울 수있습니다. 후리가나, 원곡가사, 번역 그리고 관련 유튜브 동영상을 보면서 노래와 일본어 읽기를 시작하세요.
-      </v-card-text>  
-      <music-list 
-        ref="randomMusic"
-        :songs="randomSongs" 
-        class="pa-3" 
-        list-title="추천 J-pop"/> 
-      
-      <router-link 
-        to="/music/list" 
-        class="pa-3"
-      >
-        <div class="pr-3 pl-3">
-          <v-btn 
-            block 
-            color="primary" 
-            dark>J-Pop List
-          </v-btn>
-      </div></router-link>
-    </v-card>
-    <no-ssr>
-      <ad-component
-        google-ad-slot-id="2920580186"
-        adfit-desktop-unit="DAN-t4w6dr2ubfat"
-        adfit-mobile-unit="DAN-1hbghscrx51kh"
-      />
     </no-ssr>        
     <v-card 
       class="white" 
       flat>
       <v-card-text class="text-xs-center">
-        <v-icon 
-          x-large 
-          class="blue--text text--lighten-2">far fa-newspaper</v-icon>
-      </v-card-text>
-      <v-card-text class="text-xs-center">
+        <v-icon  
+          class="blue--text text--lighten-2 mr-2">far fa-newspaper</v-icon>
         매일 1시간에 한번씩 업데이트 되는 일본의 4대 메인 뉴스인 일본 TV(NNN), 아사히(ANN), TBS(JNN), 후지 TV(FNN)의 기사를 후리가나와 함께 읽을 수 있습니다. 
       </v-card-text>
       <news-list 
@@ -105,6 +66,41 @@
         />
       </no-ssr>
     </div>
+    
+    <v-card 
+      class="white" 
+      flat> 
+      <v-card-text class="text-xs-center">
+        <v-icon 
+          class="blue--text text--lighten-2 mr-2">fas fa-music</v-icon>
+
+        80년도에서 최신 J-pop 7000여곡의 노래를 후리가나를 읽으면서 일본어를 배울 수있습니다. 후리가나, 원곡가사, 번역 그리고 관련 유튜브 동영상을 보면서 노래와 일본어 읽기를 시작하세요.
+      </v-card-text>  
+      <music-list 
+        ref="randomMusic"
+        :songs="randomSongs" 
+        class="pa-3" 
+        list-title="추천 J-pop"/> 
+      
+      <router-link 
+        to="/music/list" 
+        class="pa-3"
+      >
+        <div class="pr-3 pl-3">
+          <v-btn 
+            block 
+            color="primary" 
+            dark>J-Pop List
+          </v-btn>
+      </div></router-link>
+    </v-card>
+    <no-ssr>
+      <ad-component
+        google-ad-slot-id="2920580186"
+        adfit-desktop-unit="DAN-t4w6dr2ubfat"
+        adfit-mobile-unit="DAN-1hbghscrx51kh"
+      />
+    </no-ssr>
   </div>
 </template>
 
