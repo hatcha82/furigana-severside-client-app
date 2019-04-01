@@ -1,7 +1,7 @@
 FROM node:10.15.3-alpine
 
 ENV NODE_ENV=production
-ENV HOST=0.0.0.0
+ENV HOST=127.0.0.1
 ENV PORT=3000
 ENV API_URL=http://www.furiganahub.com:8080
 ENV API_URL_BROWSER=http://www.furiganahub.com:8080
