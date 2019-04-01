@@ -4,7 +4,7 @@
     <v-layout 
       wrap 
     >
-      <!-- <v-flex 
+      <v-flex 
         xs12
         sm12
         md12 
@@ -18,7 +18,7 @@
             /> 
           </div>
         </no-ssr>
-      </v-flex> -->
+      </v-flex>
       <v-flex 
         xs12
         sm6

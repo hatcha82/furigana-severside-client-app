@@ -1,14 +1,13 @@
 <template>
   <div>
-    
-    <!-- <no-ssr>
+    <no-ssr>
       <ad-component
         google-ad-slot-id="2920580186"
         adfit-desktop-unit="DAN-t4w6dr2ubfat" 
         adfit-mobile-unit="DAN-1hbghscrx51kh"    
         layout-type="wrap"                  
       />        
-    </no-ssr>      -->
+    </no-ssr>     
     <v-card flat>
       <v-card-title>
         <v-layout wrap>
@@ -38,14 +37,14 @@
             md6 
             lg6
           >
-            <!-- <no-ssr>  
+            <no-ssr>  
               <ad-component
                 google-ad-slot-id="5199468592"
                 adfit-desktop-unit="DAN-1h7zrmefbegc0" 
                 adfit-mobile-unit="DAN-1h84t5wt7s2ue" 
                 layout-type="wrap"           
               />     
-            </no-ssr> -->
+            </no-ssr>
           </v-flex>
         </v-layout>
       </v-card-title>
