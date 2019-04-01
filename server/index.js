@@ -1,4 +1,3 @@
-
 require('dotenv').config()
 const express = require('express')
 const consola = require('consola')
@@ -8,7 +7,8 @@ const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
 
 app.set('port', port)
-
+console.log('Host:' ,process.env.HOST)
+console.log('Port : ' ,process.env.PORT)
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js')
 config.dev = !(process.env.NODE_ENV === 'production')
