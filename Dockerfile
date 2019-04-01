@@ -10,6 +10,6 @@ EXPOSE 3000
 RUN mkdir -p /app
 COPY . /app
 WORKDIR /app
-RUN npm install
+RUN npm install --production
 RUN npm run build
 CMD ["npm", "start"]
