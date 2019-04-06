@@ -156,7 +156,7 @@ export default {
     }
   },
   mounted() {
-    this.drawer = this.$vuetify.breakpoint.mdAndUp
+    this.drawer = false
   },
   methods: {
     back() {
