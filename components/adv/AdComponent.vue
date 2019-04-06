@@ -2,7 +2,7 @@
   <v-layout 
     :class="layoutType"
     class="white text-xs-center pa-1 mb-1">
-    <v-flex
+    <!-- <v-flex
       xs12
       sm12
       md6 
@@ -11,12 +11,12 @@
     >
       <adsbygoogle            
         :ad-slot="googleAdSlotId"/>
-    </v-flex>
+    </v-flex> -->
     <v-flex
       xs12
       sm12
-      md6 
-      lg6
+      md12
+      lg12
       class="pt-1 pb-1"
     >
       <adfit-banner
